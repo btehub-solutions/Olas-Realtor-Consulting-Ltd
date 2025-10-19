@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Image Generation Example - Olas Realtor</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/image-loader.css">
+    
+    <style>
+        .demo-section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .demo-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .demo-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .demo-card-content {
+            padding: 1.5rem;
+        }
+        .demo-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: #006B3C;
+        }
+        .demo-card p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .code-block {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .hero-demo {
+            height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-demo img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .hero-demo-content {
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        .profile-demo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .profile-demo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        .controls button {
+            display: block;
+            width: 100%;
+            margin: 0.5rem 0;
+            padding: 0.75rem;
+            background: #006B3C;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .controls button:hover {
+            background: #005530;
+        }
+    </style>
+</head>
+<body>
+    <!-- Demo Controls -->
+    <div class="controls">
+        <h4 style="margin: 0 0 1rem 0; color: #006B3C;">Image Controls</h4>
+        <button onclick="imageLoader.reloadAllImages()">
+            <i class="fas fa-sync"></i> Reload All
+        </button>
+        <button onclick="imageLoader.clearCache()">
+            <i class="fas fa-trash"></i> Clear Cache
+        </button>
+        <button onclick="console.log(imageLoader.cache)">
+            <i class="fas fa-database"></i> View Cache
+        </button>
+    </div>
+
+    <!-- Hero Banner Example (16:9) -->
+    <section class="hero-demo">
+        <img 
+            data-auto-image="demo-hero-1"
+            data-image-type="banner"
+            data-image-context="hero"
+            alt="Modern Nigerian Real Estate Cityscape"
+            loading="eager"
+        >
+        <div class="hero-demo-content">
+            <h1>Hero Banner (16:9)</h1>
+            <p>Auto-generated Nigeria cityscape</p>
+        </div>
+    </section>
+
+    <!-- Property Cards Example (4:3) -->
+    <section class="demo-section">
+        <h2 style="color: #006B3C; margin-bottom: 1rem;">
+            <i class="fas fa-home"></i> Property Cards (4:3 Aspect Ratio)
+        </h2>
+        <p style="color: #666; margin-bottom: 2rem;">
+            These images are automatically fetched with Nigeria-relevant property prompts
+        </p>
+
+        <div class="demo-grid">
+            <div class="demo-card">
+                <img 
+                    data-auto-image="demo-property-1"
+                    data-image-type="card"
+                    data-image-context="residential"
+                    alt="Luxury Home in Lagos"
+                    loading="lazy"
+                >
+                <div class="demo-card-content">
+                    <h3>Residential Property</h3>
+                    <p>Auto-generated luxury home image</p>
+                    <div class="code-block">
+                        <code>data-image-context="residential"</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <img 
+                    data-auto-image="demo-property-2"
+                    data-image-type="card"
+                    data-image-context="commercial"
+                    alt="Commercial Office Building"
+                    loading="lazy"
+                >
+                <div class="demo-card-content">
+                    <h3>Commercial Property</h3>
+                    <p>Auto-generated office building</p>
+                    <div class="code-block">
+                        <code>data-image-context="commercial"</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <img 
+                    data-auto-image="demo-property-3"
+                    data-image-type="card"
+                    data-image-context="properties"
+                    alt="Modern Apartment Complex"
+                    loading="lazy"
+                >
+                <div class="demo-card-content">
+                    <h3>Mixed Property</h3>
+                    <p>General property context</p>
+                    <div class="code-block">
+                        <code>data-image-context="properties"</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team/Office Images Example (4:3) -->
+    <section class="demo-section" style="background: #f5f5f5;">
+        <h2 style="color: #006B3C; margin-bottom: 1rem;">
+            <i class="fas fa-users"></i> Team & Office Images (4:3)
+        </h2>
+        <p style="color: #666; margin-bottom: 2rem;">
+            Professional Nigerian business and office environments
+        </p>
+
+        <div class="demo-grid">
+            <div class="demo-card">
+                <img 
+                    data-auto-image="demo-team-1"
+                    data-image-type="card"
+                    data-image-context="team"
+                    alt="Our Professional Team"
+                    loading="lazy"
+                >
+                <div class="demo-card-content">
+                    <h3>Team Meeting</h3>
+                    <p>Business professionals in Nigeria</p>
+                    <div class="code-block">
+                        <code>data-image-context="team"</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <img 
+                    data-auto-image="demo-office-1"
+                    data-image-type="card"
+                    data-image-context="office"
+                    alt="Modern Office Space"
+                    loading="lazy"
+                >
+                <div class="demo-card-content">
+                    <h3>Office Environment</h3>
+                    <p>Corporate office in Lagos/Abuja</p>
+                    <div class="code-block">
+                        <code>data-image-context="office"</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <img 
+                    data-auto-image="demo-company-1"
+                    data-image-type="card"
+                    data-image-context="company"
+                    alt="Company Overview"
+                    loading="lazy"
+                >
+                <div class="demo-card-content">
+                    <h3>Company Image</h3>
+                    <p>Professional business setting</p>
+                    <div class="code-block">
+                        <code>data-image-context="company"</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile/Testimonial Images Example (1:1) -->
+    <section class="demo-section">
+        <h2 style="color: #006B3C; margin-bottom: 1rem;">
+            <i class="fas fa-user-circle"></i> Profile Images (1:1 Square)
+        </h2>
+        <p style="color: #666; margin-bottom: 2rem;">
+            Professional Nigerian portraits for testimonials and team members
+        </p>
+
+        <div style="display: grid; gap: 1rem;">
+            <div class="profile-demo">
+                <img 
+                    data-auto-image="demo-testimonial-1"
+                    data-image-type="profile"
+                    data-image-context="testimonials"
+                    alt="Mr. Adebayo Johnson"
+                    loading="lazy"
+                >
+                <div>
+                    <h4 style="margin: 0 0 0.25rem 0; color: #006B3C;">Mr. Adebayo Johnson</h4>
+                    <p style="margin: 0; color: #666; font-size: 0.9rem;">Property Buyer</p>
+                    <div class="code-block" style="margin-top: 0.5rem;">
+                        <code>data-image-type="profile"</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-demo">
+                <img 
+                    data-auto-image="demo-testimonial-2"
+                    data-image-type="profile"
+                    data-image-context="testimonials"
+                    alt="Miss Chioma Okafor"
+                    loading="lazy"
+                >
+                <div>
+                    <h4 style="margin: 0 0 0.25rem 0; color: #006B3C;">Miss Chioma Okafor</h4>
+                    <p style="margin: 0; color: #666; font-size: 0.9rem;">Training Graduate</p>
+                    <div class="code-block" style="margin-top: 0.5rem;">
+                        <code>data-image-context="testimonials"</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-demo">
+                <img 
+                    data-auto-image="demo-testimonial-3"
+                    data-image-type="profile"
+                    data-image-context="testimonials"
+                    alt="Dr. Emeka Nwosu"
+                    loading="lazy"
+                >
+                <div>
+                    <h4 style="margin: 0 0 0.25rem 0; color: #006B3C;">Dr. Emeka Nwosu</h4>
+                    <p style="margin: 0; color: #666; font-size: 0.9rem;">Property Owner</p>
+                    <div class="code-block" style="margin-top: 0.5rem;">
+                        <code>1:1 aspect ratio for profiles</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Examples -->
+    <section class="demo-section" style="background: #f5f5f5;">
+        <h2 style="color: #006B3C; margin-bottom: 1rem;">
+            <i class="fas fa-code"></i> Implementation Examples
+        </h2>
+
+        <h3 style="color: #333; margin-top: 2rem;">Hero Banner (16:9)</h3>
+        <div class="code-block">
+            <code>&lt;img 
+    data-auto-image="home-hero-1"
+    data-image-type="banner"
+    data-image-context="hero"
+    alt="Modern Nigerian Real Estate"
+    loading="eager"
+&gt;</code>
+        </div>
+
+        <h3 style="color: #333; margin-top: 2rem;">Property Card (4:3)</h3>
+        <div class="code-block">
+            <code>&lt;img 
+    data-auto-image="property-card-1"
+    data-image-type="card"
+    data-image-context="residential"
+    alt="Luxury 4-Bedroom Duplex"
+    loading="lazy"
+&gt;</code>
+        </div>
+
+        <h3 style="color: #333; margin-top: 2rem;">Testimonial Profile (1:1)</h3>
+        <div class="code-block">
+            <code>&lt;img 
+    data-auto-image="testimonial-1"
+    data-image-type="profile"
+    data-image-context="testimonials"
+    alt="Client Name"
+    loading="lazy"
+&gt;</code>
+        </div>
+
+        <h3 style="color: #333; margin-top: 2rem;">Team Member (4:3)</h3>
+        <div class="code-block">
+            <code>&lt;img 
+    data-auto-image="team-member-1"
+    data-image-type="content"
+    data-image-context="team"
+    alt="Real Estate Agent"
+    loading="lazy"
+&gt;</code>
+        </div>
+    </section>
+
+    <!-- Status Information -->
+    <section class="demo-section">
+        <h2 style="color: #006B3C; margin-bottom: 1rem;">
+            <i class="fas fa-info-circle"></i> System Status
+        </h2>
+        <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <div id="status-info">
+                <p><strong>Loading...</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Generation Scripts -->
+    <script src="js/image-config.js"></script>
+    <script src="js/image-loader.js"></script>
+
+    <!-- Status Display Script -->
+    <script>
+        // Display system status
+        setTimeout(() => {
+            const statusDiv = document.getElementById('status-info');
+            const cacheSize = Object.keys(imageLoader.cache).length;
+            const totalImages = document.querySelectorAll('[data-auto-image]').length;
+            const loadedImages = imageLoader.loadedImages.size;
+            
+            statusDiv.innerHTML = `
+                <p><strong>Image Loader Status:</strong></p>
+                <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666;">
+                    <li>Total Images: ${totalImages}</li>
+                    <li>Loaded Images: ${loadedImages}</li>
+                    <li>Cached Images: ${cacheSize}</li>
+                    <li>Lazy Loading: ${imageLoader.observer ? 'Enabled' : 'Disabled'}</li>
+                    <li>Cache Enabled: ${imageLoader.config.cache.enabled ? 'Yes' : 'No'}</li>
+                </ul>
+                <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">
+                    <strong>Note:</strong> If images don't load, check that you've added your API keys in 
+                    <code>js/image-config.js</code>. See <code>IMAGE_GENERATION_GUIDE.md</code> for setup instructions.
+                </p>
+                <div style="margin-top: 1rem; padding: 1rem; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 5px;">
+                    <strong>⚠️ API Keys Required:</strong><br>
+                    This demo requires Unsplash or Pexels API keys. Without them, fallback images will be used.
+                    <br><br>
+                    <strong>Setup:</strong>
+                    <ol style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                        <li>Get free API key from <a href="https://unsplash.com/developers" target="_blank">Unsplash</a> or <a href="https://www.pexels.com/api/" target="_blank">Pexels</a></li>
+                        <li>Add key to <code>js/image-config.js</code></li>
+                        <li>Refresh this page</li>
+                    </ol>
+                </div>
+            `;
+        }, 1000);
+
+        // Log cache info to console
+        console.log('Image Loader initialized:', imageLoader);
+        console.log('Current cache:', imageLoader.cache);
+        console.log('Configuration:', imageLoader.config);
+    </script>
+</body>
+</html>

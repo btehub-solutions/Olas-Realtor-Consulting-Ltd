@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Email Form - OLA REALTOR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #006400, #008F4F);
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #006400;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #006400;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #006400, #008F4F);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,100,0,0.3);
+        }
+        .info-box {
+            background: #e8f5e9;
+            border-left: 4px solid #006400;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .info-box strong {
+            color: #006400;
+        }
+        .status {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            display: none;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 Email Form Test</h1>
+        <p class="subtitle">Test the contact form connection to olasarealtor@gmail.com</p>
+        
+        <div class="info-box">
+            <strong>📌 How it works:</strong><br>
+            1. Fill out the form below<br>
+            2. Click "Send Message"<br>
+            3. Your email client will open with olasarealtor@gmail.com<br>
+            4. Click "Send" in your email program to complete
+        </div>
+        
+        <form id="testForm" onsubmit="return sendTestEmail(event);">
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+234 XXX XXX XXXX">
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject <span class="required">*</span></label>
+                <select id="subject" name="subject" required>
+                    <option value="">Select a subject</option>
+                    <option value="property-sales">Property Sales Inquiry</option>
+                    <option value="letting-rentals">Letting & Rentals Inquiry</option>
+                    <option value="ict-training">ICT Training Inquiry</option>
+                    <option value="general">General Inquiry</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">📨 Send Message</button>
+        </form>
+        
+        <div id="statusMessage" class="status"></div>
+    </div>
+
+    <script>
+        function sendTestEmail(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value || 'Not provided';
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Validate required fields
+            if (!name || !email || !subject || !message) {
+                alert('❌ Please fill in all required fields');
+                return false;
+            }
+            
+            // Create email body with proper encoding
+            const emailBody = encodeURIComponent(
+                `Contact Form Submission\n\n` +
+                `Name: ${name}\n` +
+                `Email: ${email}\n` +
+                `Phone: ${phone}\n` +
+                `Subject: ${subject}\n\n` +
+                `Message:\n${message}\n\n` +
+                `---\nSent from OLA REALTOR website contact form`
+            );
+            
+            // Create email subject with proper encoding
+            const emailSubject = encodeURIComponent(`Contact Form: ${subject}`);
+            
+            // Create mailto link
+            const mailtoLink = `mailto:olasarealtor@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+            
+            console.log('Opening email client with:', mailtoLink);
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            const statusDiv = document.getElementById('statusMessage');
+            statusDiv.className = 'status success';
+            statusDiv.innerHTML = '✅ Email client should open now!<br>Check your email program and click Send to complete.';
+            
+            return false;
+        }
+    </script>
+</body>
+</html>

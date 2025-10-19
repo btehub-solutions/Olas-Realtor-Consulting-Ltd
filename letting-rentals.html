@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find quality rental properties across Nigeria. Professional letting and property management services from OLA REALTOR CONSULTING LTD.">
+    <title>Letting & Rentals - OLA REALTOR CONSULTING LTD</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/OLAS_UPDATED_LOGO-removebg-preview.png" alt="Olas Realtor Consulting Ltd" class="logo-image">
+            </a>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="nav-link active" data-page="services">Services <span class="dropdown-icon">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="property-sales.html">Property Sales</a></li>
+                        <li><a href="letting-rentals.html">Letting & Rentals</a></li>
+                        <li><a href="ict-training.html">ICT Training</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 60px 20px;">
+        <div class="hero-content">
+            <h1>Letting & Rentals</h1>
+            <p>Professional Property Management & Rental Services</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="color: var(--primary-green); font-size: 2rem; margin-bottom: 1rem;">
+                    Secure, Transparent Rental & Letting Solutions
+                </h2>
+                <p style="color: var(--gray); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                    We provide comprehensive letting and rental services for both landlords and tenants. 
+                    Whether you're looking to list your property for rent or find your perfect home, 
+                    our professional team ensures smooth, transparent transactions and ongoing support.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#available-rentals" class="btn btn-primary">Find Your Perfect Home</a>
+                    <a href="contact.html" class="btn btn-secondary" style="background-color: var(--horse-blood); color: var(--white); border: 2px solid var(--horse-blood);">List Your Property</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Rentals -->
+    <section class="section section-alt" id="available-rentals">
+        <div class="container">
+            <div class="section-title">
+                <h2>Available Rental Properties</h2>
+                <p>Browse our current rental listings</p>
+            </div>
+            
+            <div class="card-grid">
+                <!-- Rental 1 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop" alt="Modern 3-Bedroom Apartment in Victoria Island" loading="lazy">
+                        <span class="property-badge" style="background-color: var(--primary-green);">For Rent</span>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Modern 3-Bedroom Apartment</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Ibara, Abeokuta, Ogun State</p>
+                        <div class="property-features">
+                            <span class="property-feature"><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span class="property-feature"><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span class="property-feature"><i class="fas fa-ruler-combined"></i> 180 sqm</span>
+                            <span class="property-feature"><i class="fas fa-car"></i> 2 Parking</span>
+                        </div>
+                        <p class="property-price">₦3,500,000/year</p>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <!-- Rental 2 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop" alt="Luxury 4-Bedroom Duplex in Lekki" loading="lazy">
+                        <span class="property-badge" style="background-color: var(--primary-green);">For Rent</span>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Luxury 4-Bedroom Duplex</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Oluwo, Abeokuta, Ogun State</p>
+                        <div class="property-features">
+                            <span class="property-feature"><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span class="property-feature"><i class="fas fa-bath"></i> 3 Baths</span>
+                            <span class="property-feature"><i class="fas fa-ruler-combined"></i> 300 sqm</span>
+                            <span class="property-feature"><i class="fas fa-car"></i> 2 Parking</span>
+                        </div>
+                        <p class="property-price">₦5,000,000/year</p>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <!-- Rental 3 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop" alt="Cozy 2-Bedroom Flat in Yaba" loading="lazy">
+                        <span class="property-badge" style="background-color: var(--primary-green);">For Rent</span>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Cozy 2-Bedroom Flat</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Kuto, Abeokuta, Ogun State</p>
+                        <div class="property-features">
+                            <span class="property-feature"><i class="fas fa-bed"></i> 2 Beds</span>
+                            <span class="property-feature"><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span class="property-feature"><i class="fas fa-ruler-combined"></i> 120 sqm</span>
+                            <span class="property-feature"><i class="fas fa-car"></i> 1 Parking</span>
+                        </div>
+                        <p class="property-price">₦1,800,000/year</p>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <!-- Rental 4 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop" alt="Serviced 3-Bedroom Apartment in Ikoyi" loading="lazy">
+                        <span class="property-badge" style="background-color: var(--primary-green);">For Rent</span>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Serviced 3-Bedroom Apartment</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Kobape, Abeokuta, Ogun State</p>
+                        <div class="property-features">
+                            <span class="property-feature"><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span class="property-feature"><i class="fas fa-bath"></i> 3 Baths</span>
+                            <span class="property-feature"><i class="fas fa-ruler-combined"></i> 200 sqm</span>
+                            <span class="property-feature"><i class="fas fa-car"></i> 2 Parking</span>
+                        </div>
+                        <p class="property-price">₦6,000,000/year</p>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <!-- Rental 5 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop" alt="Spacious 5-Bedroom House in Ajah" loading="lazy">
+                        <span class="property-badge" style="background-color: var(--primary-green);">For Rent</span>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Spacious 5-Bedroom House</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Isale Igbein, Abeokuta, Ogun State</p>
+                        <div class="property-features">
+                            <span class="property-feature"><i class="fas fa-bed"></i> 5 Beds</span>
+                            <span class="property-feature"><i class="fas fa-bath"></i> 4 Baths</span>
+                            <span class="property-feature"><i class="fas fa-ruler-combined"></i> 400 sqm</span>
+                            <span class="property-feature"><i class="fas fa-car"></i> 3 Parking</span>
+                        </div>
+                        <p class="property-price">₦4,200,000/year</p>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <!-- Rental 6 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop" alt="Commercial Shop Space in Ikeja" loading="lazy">
+                        <span class="property-badge" style="background-color: var(--primary-green);">For Rent</span>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Commercial Shop Space</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Abiola Way, Abeokuta, Ogun State</p>
+                        <div class="property-features">
+                            <span class="property-feature"><i class="fas fa-store"></i> Retail</span>
+                            <span class="property-feature"><i class="fas fa-restroom"></i> 2 Restrooms</span>
+                            <span class="property-feature"><i class="fas fa-ruler-combined"></i> 150 sqm</span>
+                            <span class="property-feature"><i class="fas fa-car"></i> 5 Parking</span>
+                        </div>
+                        <p class="property-price">₦2,500,000/year</p>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services for Landlords & Tenants -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Letting Services</h2>
+                <p>Comprehensive solutions for landlords and tenants</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop" alt="Property Management for Landlords" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><i class="fas fa-home" style="color: var(--primary-green);"></i> For Landlords</h3>
+                        <ul style="text-align: left; color: var(--gray); line-height: 2;">
+                            <li>✓ Tenant sourcing and screening</li>
+                            <li>✓ Property marketing</li>
+                            <li>✓ Rent collection management</li>
+                            <li>✓ Property maintenance coordination</li>
+                            <li>✓ Legal documentation</li>
+                            <li>✓ Regular property inspections</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e?w=800&h=600&fit=crop" alt="Rental Services for Tenants" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><i class="fas fa-key" style="color: var(--primary-green);"></i> For Tenants</h3>
+                        <ul style="text-align: left; color: var(--gray); line-height: 2;">
+                            <li>✓ Property search assistance</li>
+                            <li>✓ Property viewings</li>
+                            <li>✓ Lease negotiation</li>
+                            <li>✓ Move-in support</li>
+                            <li>✓ Maintenance requests</li>
+                            <li>✓ Lease renewal assistance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rental Process -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Simple steps to find or let your property</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon" style="color: var(--primary-green);"><i class="fas fa-phone-alt"></i></div>
+                    <h3 class="feature-title">Initial Contact</h3>
+                    <p class="feature-text">Reach out to discuss your requirements</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon" style="color: var(--horse-blood);"><i class="fas fa-search"></i></div>
+                    <h3 class="feature-title">Property Matching</h3>
+                    <p class="feature-text">We find properties that suit your needs</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon" style="color: var(--primary-green);"><i class="fas fa-eye"></i></div>
+                    <h3 class="feature-title">Viewing & Selection</h3>
+                    <p class="feature-text">Schedule viewings and choose your property</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon" style="color: var(--horse-blood);"><i class="fas fa-file-contract"></i></div>
+                    <h3 class="feature-title">Documentation</h3>
+                    <p class="feature-text">We handle all legal paperwork</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon" style="color: var(--primary-green);"><i class="fas fa-truck-moving"></i></div>
+                    <h3 class="feature-title">Move-In</h3>
+                    <p class="feature-text">Smooth handover and move-in process</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon" style="color: var(--horse-blood);"><i class="fas fa-headset"></i></div>
+                    <h3 class="feature-title">Ongoing Support</h3>
+                    <p class="feature-text">Continuous management and support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="color: var(--primary-green); font-size: 2.5rem; margin-bottom: 1rem;">
+                    Ready to Get Started?
+                </h2>
+                <p style="font-size: 1.2rem; color: var(--gray); margin-bottom: 2rem;">
+                    Whether you're looking for a rental home or want to list your property, we're here to help.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#available-rentals" class="btn btn-primary" style="font-size: 1.1rem;">Find Your Perfect Home</a>
+                    <a href="contact.html" class="btn btn-secondary" style="font-size: 1.1rem; background-color: var(--horse-blood); color: var(--white); border: 2px solid var(--horse-blood);">List Your Property</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="assets/images/OLAS_UPDATED_LOGO-removebg-preview.png" alt="Olas Realtor Consulting Ltd" class="footer-logo-image">
+                </div>
+                <p class="footer-description">
+                    Your trusted partner in real estate solutions across Nigeria. 
+                    We provide professional property sales, lettings, and ICT training services.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="property-sales.html">Property Sales</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="property-sales.html">Property Sales</a></li>
+                    <li><a href="letting-rentals.html">Letting & Rentals</a></li>
+                    <li><a href="ict-training.html">ICT Training</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> 48, Olayiwola Bankole Street, Oluwo, Abeokuta, Ogun State</li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+2348164220387" style="color: inherit; text-decoration: none;">08164220387</a> / <a href="tel:+2348055800325" style="color: inherit; text-decoration: none;">08055800325</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:olasarealtor@gmail.com" style="color: inherit; text-decoration: none;">olasarealtor@gmail.com</a></li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2348164220387" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Chat on WhatsApp</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/olasrealtor" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/is_ola001" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/is_olasrealtor" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/olas-realtor-consulting-ltd-626284373" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 OLA REALTOR CONSULTING LTD. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

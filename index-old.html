@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OLA REALTOR CONSULTING LTD - Your trusted partner in real estate solutions across Nigeria. Property sales, lettings, and ICT training services.">
+    <meta name="keywords" content="real estate, property sales, lettings, rentals, ICT training, Nigeria, Lagos">
+    <meta name="author" content="OLA REALTOR CONSULTING LTD">
+    <meta name="theme-color" content="#006400">
+    <title>OLA REALTOR CONSULTING LTD - Home</title>
+    
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-placeholder">
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">OLA REALTOR</span>
+                    <span class="logo-subtitle">CONSULTING LTD</span>
+                </a>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html" class="nav-link" data-page="services">Services <span class="dropdown-icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="property-sales.html">Property Sales</a></li>
+                            <li><a href="letting-rentals.html">Letting & Rentals</a></li>
+                            <li><a href="ict-training.html">ICT Training</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to OLA REALTOR CONSULTING LTD</h1>
+            <p>Your Trusted Partner in Real Estate Solutions Across Nigeria</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="property-sales.html" class="btn btn-primary">Browse Properties</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Highlight -->
+    <section class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop" alt="About OLA REALTOR CONSULTING LTD" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h2 style="color: var(--primary-green); margin-bottom: 1rem;">About OLA REALTOR CONSULTING LTD</h2>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 1rem;">
+                        OLA REALTOR CONSULTING LTD is a leading real estate consulting firm based in Nigeria, 
+                        dedicated to providing exceptional property solutions and ICT training services. 
+                        With years of experience in the Nigerian real estate market, we have built a reputation 
+                        for professionalism, integrity, and client satisfaction.
+                    </p>
+                    <p style="color: var(--gray); line-height: 1.8; margin-bottom: 1.5rem;">
+                        Our team of experienced professionals is committed to helping clients navigate the 
+                        complexities of property transactions, whether buying, selling, or renting.
+                    </p>
+                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive real estate solutions tailored to your needs</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop" alt="Property Sales" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><i class="fas fa-home"></i> Property Sales</h3>
+                        <p class="card-text">Find your dream property from our extensive portfolio of residential and commercial properties across Nigeria.</p>
+                        <a href="property-sales.html" class="card-link">View Properties <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&h=600&fit=crop" alt="Letting & Rentals" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><i class="fas fa-key"></i> Letting & Rentals</h3>
+                        <p class="card-text">Professional property management and rental services to help you find the perfect space or tenant.</p>
+                        <a href="letting-rentals.html" class="card-link">Explore Rentals <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop" alt="ICT Training" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><i class="fas fa-laptop-code"></i> ICT Training</h3>
+                        <p class="card-text">Enhance your digital skills with our comprehensive ICT training programs designed for all levels.</p>
+                        <a href="ict-training.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+                <p>We deliver excellence in every aspect of our service</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3 class="feature-title">Expert Guidance</h3>
+                    <p class="feature-text">Professional advice from experienced real estate consultants</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fas fa-globe-africa"></i></div>
+                    <h3 class="feature-title">Wide Coverage</h3>
+                    <p class="feature-text">Properties across major cities in Nigeria</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3 class="feature-title">Professional Service</h3>
+                    <p class="feature-text">Dedicated support throughout your journey</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                    <h3 class="feature-title">Trusted Partner</h3>
+                    <p class="feature-text">Years of experience in the Nigerian market</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Properties</h2>
+                <p>Explore our handpicked selection of premium properties</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop" alt="Luxury 4-Bedroom Duplex in Lekki Phase 1, Lagos" loading="lazy">
+                        <span class="property-badge">For Sale</span>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Luxury 4-Bedroom Duplex</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Lekki Phase 1, Lagos</p>
+                        <div class="property-features">
+                            <span class="property-feature"><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span class="property-feature"><i class="fas fa-bath"></i> 3 Baths</span>
+                            <span class="property-feature"><i class="fas fa-ruler-combined"></i> 350 sqm</span>
+                        </div>
+                        <p class="property-price">₦85,000,000</p>
+                        <a href="property-sales.html" class="btn btn-primary" style="width: 100%; text-align: center;">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop" alt="Modern 3-Bedroom Apartment in Victoria Island, Lagos" loading="lazy">
+                        <span class="property-badge">For Rent</span>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Modern 3-Bedroom Apartment</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Victoria Island, Lagos</p>
+                        <div class="property-features">
+                            <span class="property-feature"><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span class="property-feature"><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span class="property-feature"><i class="fas fa-ruler-combined"></i> 180 sqm</span>
+                        </div>
+                        <p class="property-price">₦3,500,000/year</p>
+                        <a href="letting-rentals.html" class="btn btn-primary" style="width: 100%; text-align: center;">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop" alt="Executive 5-Bedroom Villa in Banana Island, Lagos" loading="lazy">
+                        <span class="property-badge">For Sale</span>
+                    </div>
+                    <div class="property-content">
+                        <h3 class="property-title">Executive 5-Bedroom Villa</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Banana Island, Lagos</p>
+                        <div class="property-features">
+                            <span class="property-feature"><i class="fas fa-bed"></i> 5 Beds</span>
+                            <span class="property-feature"><i class="fas fa-bath"></i> 4 Baths</span>
+                            <span class="property-feature"><i class="fas fa-ruler-combined"></i> 500 sqm</span>
+                        </div>
+                        <p class="property-price">₦250,000,000</p>
+                        <a href="property-sales.html" class="btn btn-primary" style="width: 100%; text-align: center;">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from those who have worked with us</p>
+            </div>
+            
+            <div class="testimonial-carousel">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "OLA REALTOR helped us find our dream home in Lekki. Their professionalism and 
+                                attention to detail made the entire process seamless. Highly recommended!"
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Client" loading="lazy">
+                                </div>
+                                <div>
+                                    <h4 class="author-name">Mr. Adebayo Johnson</h4>
+                                    <p class="author-title">Property Buyer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "The ICT training program was excellent! The instructors were knowledgeable and 
+                                the hands-on approach helped me gain practical skills I use in my job daily."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Client" loading="lazy">
+                                </div>
+                                <div>
+                                    <h4 class="author-name">Miss Chioma Okafor</h4>
+                                    <p class="author-title">ICT Training Graduate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "As a landlord, I appreciate their property management services. They handle 
+                                everything professionally and keep me informed. Great peace of mind!"
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" alt="Client" loading="lazy">
+                                </div>
+                                <div>
+                                    <h4 class="author-name">Dr. Emeka Nwosu</h4>
+                                    <p class="author-title">Property Owner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-prev" aria-label="Previous testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-next" aria-label="Next testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section section-alt">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="color: var(--primary-green); font-size: 2.5rem; margin-bottom: 1rem;">Ready to Find Your Dream Property?</h2>
+                <p style="font-size: 1.2rem; color: var(--gray); margin-bottom: 2rem;">
+                    Let our expert team help you navigate the Nigerian real estate market with confidence.
+                </p>
+                <a href="contact.html" class="btn btn-primary" style="font-size: 1.1rem;">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder">
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">OLA REALTOR</span>
+                        <span class="logo-subtitle">CONSULTING LTD</span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted partner in real estate solutions across Nigeria. 
+                        We provide professional property sales, lettings, and ICT training services.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="property-sales.html">Property Sales</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="property-sales.html">Property Sales</a></li>
+                        <li><a href="letting-rentals.html">Letting & Rentals</a></li>
+                        <li><a href="ict-training.html">ICT Training</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</li>
+                        <li><i class="fas fa-phone"></i> +234 XXX XXX XXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@olarealtorconsulting.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 OLA REALTOR CONSULTING LTD. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/menu.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

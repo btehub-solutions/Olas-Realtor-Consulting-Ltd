@@ -1,0 +1,133 @@
+🌐 HOW TO RUN YOUR WEBSITE LOCALLY
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+THE PROBLEM:
+
+FormSubmit (and most web services) don't work when you open HTML files directly 
+from your computer (file:/// URLs). You need a web server!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+THE SOLUTION - 2 EASY OPTIONS:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPTION 1: DOUBLE-CLICK START_SERVER.bat (EASIEST!)
+
+1. Find the file: START_SERVER.bat
+2. Double-click it
+3. A window will open showing: "Serving HTTP on 0.0.0.0 port 8000"
+4. Open your browser and go to: http://localhost:8000
+5. Your website is now running!
+6. To stop: Close the window or press Ctrl+C
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPTION 2: USE LIVE SERVER (VS CODE EXTENSION)
+
+If you're using VS Code:
+
+1. Install "Live Server" extension
+2. Right-click on index.html
+3. Select "Open with Live Server"
+4. Website opens automatically in browser
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ACCESSING YOUR WEBSITE:
+
+Once the server is running, open your browser and go to:
+
+🏠 Homepage: http://localhost:8000/index.html
+📧 Contact Page: http://localhost:8000/contact.html
+ℹ️ About Page: http://localhost:8000/about.html
+🏢 Services: http://localhost:8000/services.html
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TESTING THE CONTACT FORM:
+
+1. Start the server (using START_SERVER.bat)
+2. Go to: http://localhost:8000/contact.html
+3. Fill out the form
+4. Click "Send Message"
+5. Check olasarealtor@gmail.com for activation email
+6. Click the activation link
+7. Done! Form is now active!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IMPORTANT NOTES:
+
+✅ The server only runs on YOUR computer
+✅ Only YOU can access it (localhost)
+✅ When you close the server, the website stops
+✅ This is for TESTING only
+✅ For a real website, you need web hosting (see below)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DEPLOYING TO THE INTERNET (Making it public):
+
+To make your website accessible to everyone, you need to upload it to a 
+web hosting service. Here are some FREE options:
+
+1. NETLIFY (Recommended - Easiest)
+   - Go to: https://www.netlify.com
+   - Drag & drop your website folder
+   - Get a free URL like: ola-realtor.netlify.app
+   - FormSubmit will work automatically!
+
+2. VERCEL
+   - Go to: https://vercel.com
+   - Import your project
+   - Free hosting with custom domain support
+
+3. GITHUB PAGES
+   - Upload to GitHub
+   - Enable GitHub Pages
+   - Free hosting
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUICK START GUIDE:
+
+RIGHT NOW (Testing):
+1. Double-click START_SERVER.bat
+2. Go to http://localhost:8000/contact.html
+3. Test the contact form
+4. Activate FormSubmit
+
+LATER (Going Live):
+1. Sign up for Netlify (free)
+2. Drag your website folder to Netlify
+3. Get your public URL
+4. Share with customers!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TROUBLESHOOTING:
+
+Q: "Python is not recognized"?
+A: You need Python installed. Download from: https://www.python.org/downloads/
+   OR use Live Server extension in VS Code instead
+
+Q: Port 8000 already in use?
+A: Change the port in START_SERVER.bat to 8001 or 8080
+
+Q: Can't access localhost:8000?
+A: Make sure the server is running (window should be open)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SUMMARY:
+
+✅ START_SERVER.bat created - just double-click it!
+✅ Go to http://localhost:8000 in your browser
+✅ Contact form will work when running on server
+✅ For public website, use Netlify (free & easy)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Date: October 19, 2025

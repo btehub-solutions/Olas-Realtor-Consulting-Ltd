@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact OLA REALTOR CONSULTING LTD for all your real estate and ICT training needs.">
+    <title>Contact Us - OLA REALTOR CONSULTING LTD</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/OLAS_UPDATED_LOGO-removebg-preview.png" alt="Olas Realtor Consulting Ltd" class="logo-image">
+            </a>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="nav-link">Services <span class="dropdown-icon">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="property-sales.html">Property Sales</a></li>
+                        <li><a href="letting-rentals.html">Letting & Rentals</a></li>
+                        <li><a href="ict-training.html">ICT Training</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 60px 20px;">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>We're Here to Help You Achieve Your Goals</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+                <!-- Contact Form -->
+                <div class="contact-container" style="max-width: 100%;">
+                    <h2 style="color: var(--primary-green); margin-bottom: 1rem;">Send Us a Message</h2>
+                    <p style="color: var(--gray); margin-bottom: 2rem;">
+                        Fill out the form below and we'll get back to you as soon as possible.
+                    </p>
+                    
+                    <!-- Contact form that sends to olasarealtor@gmail.com -->
+                    <form action="https://formsubmit.co/olasarealtor@gmail.com" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from OLA REALTOR Website">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+234">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <select id="subject" name="subject" class="form-input" required>
+                                <option value="">Select a subject</option>
+                                <option value="Property Sales Inquiry">Property Sales Inquiry</option>
+                                <option value="Letting & Rentals Inquiry">Letting & Rentals Inquiry</option>
+                                <option value="ICT Training Inquiry">ICT Training Inquiry</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-button">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div>
+                    <h2 style="color: var(--primary-green); margin-bottom: 1rem;">Get in Touch</h2>
+                    <p style="color: var(--gray); margin-bottom: 2rem;">
+                        Have questions? We'd love to hear from you.
+                    </p>
+                    
+                    <div class="contact-info-card">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem; font-size: 1.5rem;">Contact Information</h3>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="contact-label">Office Address</h4>
+                                <p class="contact-value">48, Olayiwola Bankole Street, Oluwo,<br>Abeokuta, Ogun State, Nigeria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon" style="background-color: rgba(128, 0, 0, 0.1);">
+                                <i class="fas fa-phone" style="color: var(--horse-blood);"></i>
+                            </div>
+                            <div>
+                                <h4 class="contact-label">Phone Numbers</h4>
+                                <p class="contact-value">
+                                    <a href="tel:+2348164220387" class="contact-link">08164220387</a><br>
+                                    <a href="tel:+2348055800325" class="contact-link">08055800325</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="contact-label">Email Address</h4>
+                                <p class="contact-value">
+                                    <a href="mailto:olasarealtor@gmail.com" class="contact-link">olasarealtor@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon" style="background-color: rgba(128, 0, 0, 0.1);">
+                                <i class="fab fa-whatsapp" style="color: var(--horse-blood);"></i>
+                            </div>
+                            <div>
+                                <h4 class="contact-label">WhatsApp</h4>
+                                <p class="contact-value">
+                                    <a href="https://wa.me/2348164220387" target="_blank" rel="noopener noreferrer" class="contact-link">08164220387</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="contact-label">Business Hours</h4>
+                                <p class="contact-value">
+                                    Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                    Saturday: 10:00 AM - 4:00 PM<br>
+                                    Sunday: Closed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Call-to-Action Buttons -->
+                    <div class="cta-buttons-container">
+                        <a href="https://wa.me/2348164220387" target="_blank" rel="noopener noreferrer" class="cta-button cta-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Chat With Us on WhatsApp</span>
+                        </a>
+                        <a href="tel:+2348164220387" class="cta-button cta-call">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Call Us Now</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Google Maps Embed -->
+                    <div class="map-container">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1rem; font-size: 1.5rem;">Find Us on the Map</h3>
+                        <div class="map-embed">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.0!2d3.35!3d7.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDknMDAuMCJOIDPCsDIxJzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1234567890" 
+                                width="100%" 
+                                height="350" 
+                                style="border:0; border-radius: 10px;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="OLA REALTOR CONSULTING LTD Office Location in Abeokuta">
+                            </iframe>
+                            <p style="margin-top: 1rem; color: var(--gray); font-size: 0.9rem; text-align: center;">
+                                <i class="fas fa-map-marker-alt" style="color: var(--primary-green);"></i> 
+                                48, Olayiwola Bankole Street, Oluwo, Abeokuta, Ogun State
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div style="background-color: var(--off-white); padding: 2rem; border-radius: 10px; margin-top: 2rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1rem; font-size: 1.5rem;">Connect With Us</h3>
+                        <div class="social-icons" style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: flex-start;">
+                            <a href="https://www.facebook.com/olasrealtor" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="https://x.com/is_ola001" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://www.instagram.com/is_olasrealtor" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/olas-realtor-consulting-ltd-626284373" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="assets/images/OLAS_UPDATED_LOGO-removebg-preview.png" alt="Olas Realtor Consulting Ltd" class="footer-logo-image">
+                </div>
+                <p class="footer-description">
+                    Your trusted partner in real estate solutions across Nigeria.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="property-sales.html">Property Sales</a></li>
+                    <li><a href="letting-rentals.html">Letting & Rentals</a></li>
+                    <li><a href="ict-training.html">ICT Training</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> 48, Olayiwola Bankole Street, Oluwo, Abeokuta, Ogun State</li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+2348164220387" style="color: inherit; text-decoration: none;">08164220387</a> / <a href="tel:+2348055800325" style="color: inherit; text-decoration: none;">08055800325</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:olasarealtor@gmail.com" style="color: inherit; text-decoration: none;">olasarealtor@gmail.com</a></li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2348164220387" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Chat on WhatsApp</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/olasrealtor" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/is_ola001" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/is_olasrealtor" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/olas-realtor-consulting-ltd-626284373" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 OLA REALTOR CONSULTING LTD. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- No additional scripts needed -->
+</body>
+</html>
