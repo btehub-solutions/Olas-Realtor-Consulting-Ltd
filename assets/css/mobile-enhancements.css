@@ -1,0 +1,450 @@
+/* ===================================
+   MOBILE ENHANCEMENTS
+   Additional improvements for mobile UX
+   =================================== */
+
+/* Smooth scrolling for all devices */
+html {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent text size adjustment on orientation change */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Better tap targets for mobile */
+@media (max-width: 768px) {
+    a, button, input, select, textarea {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .nav-link {
+        padding: 1rem 0;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Prevent horizontal scroll */
+body {
+    overflow-x: hidden;
+}
+
+/* Better touch feedback */
+button, a, .btn {
+    -webkit-tap-highlight-color: rgba(0, 107, 60, 0.2);
+    tap-highlight-color: rgba(0, 107, 60, 0.2);
+}
+
+/* Improve form inputs on mobile */
+@media (max-width: 768px) {
+    input, textarea, select {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+    }
+}
+
+/* Better mobile menu animation */
+@media (max-width: 768px) {
+    .mobile-toggle.active .hamburger:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+    
+    .mobile-toggle.active .hamburger:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-toggle.active .hamburger:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+}
+
+/* Improve card readability on mobile */
+@media (max-width: 480px) {
+    .card-content,
+    .property-content {
+        padding: 1.25rem;
+    }
+    
+    .card-text,
+    .property-location {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
+/* Force proper sizing on inline styled elements */
+@media (max-width: 768px) {
+    /* Override all large font sizes */
+    h1[style], h2[style], h3[style] {
+        font-size: inherit !important;
+    }
+    
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.75rem !important;
+    }
+    
+    h3 {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Fix padding on styled divs */
+    div[style*="padding"] {
+        padding: 1.5rem !important;
+    }
+    
+    /* Fix max-width containers */
+    div[style*="max-width"] {
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.65rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    div[style*="padding"] {
+        padding: 1rem !important;
+    }
+    
+    p[style*="font-size"] {
+        font-size: 0.95rem !important;
+    }
+}
+
+/* Better spacing for mobile sections */
+@media (max-width: 480px) {
+    .section {
+        padding: 40px 15px;
+    }
+    
+    .section-title {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Improve button groups on mobile */
+@media (max-width: 480px) {
+    div[style*="display: flex"] .btn {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+}
+
+/* Better footer spacing on mobile */
+@media (max-width: 480px) {
+    .footer {
+        padding: 2.5rem 15px 1rem;
+    }
+    
+    .footer-section {
+        margin-bottom: 2rem;
+    }
+    
+    .footer-section:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Improve modal on mobile */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    
+    .modal-body {
+        padding: 1.5rem 1rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Better property badge visibility */
+.property-badge {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Improve hero CTA buttons */
+.hero div[style*="display: flex"] {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+    .hero div[style*="display: flex"] a {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Better newsletter form on mobile */
+@media (max-width: 480px) {
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-input {
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    .newsletter-button {
+        width: 100%;
+    }
+}
+
+/* Improve contact info items */
+@media (max-width: 480px) {
+    .contact-info-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-icon {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Better property features layout */
+@media (max-width: 480px) {
+    .property-features {
+        justify-content: center;
+    }
+    
+    .property-feature {
+        font-size: 0.9rem;
+    }
+}
+
+/* Improve stats display */
+@media (max-width: 480px) {
+    .stat-box {
+        padding: 1.5rem 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2.25rem;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+    }
+}
+
+/* Better filter section on mobile */
+@media (max-width: 480px) {
+    .filter-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .filter-button {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+/* Improve testimonial author layout */
+@media (max-width: 480px) {
+    .testimonial-author {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .author-image {
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* Better value cards on mobile */
+@media (max-width: 480px) {
+    .value-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .value-icon {
+        font-size: 2.5rem;
+    }
+    
+    .value-title {
+        font-size: 1.35rem;
+    }
+}
+
+/* Improve about section on mobile */
+@media (max-width: 480px) {
+    .about-text h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .about-text p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+}
+
+/* Better service detail cards */
+@media (max-width: 480px) {
+    .service-detail {
+        padding: 1.5rem;
+    }
+    
+    .service-detail h3 {
+        font-size: 1.4rem;
+    }
+    
+    .service-detail ul {
+        margin-left: 1.5rem;
+    }
+}
+
+/* Improve carousel controls on mobile */
+@media (max-width: 480px) {
+    .carousel-btn {
+        opacity: 0.9;
+    }
+    
+    .carousel-prev {
+        left: 10px;
+    }
+    
+    .carousel-next {
+        right: 10px;
+    }
+}
+
+/* Better loading states */
+.preloader-logo {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Improve focus states for accessibility */
+@media (max-width: 768px) {
+    a:focus,
+    button:focus,
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: 3px solid var(--primary-green);
+        outline-offset: 3px;
+    }
+}
+
+/* Better image loading */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, .btn, .card, .property-card, .feature-box {
+    will-change: transform;
+}
+
+/* Prevent layout shift */
+.card-image,
+.property-image {
+    aspect-ratio: 16 / 9;
+}
+
+/* Better text rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Fix grid layouts on mobile */
+@media (max-width: 768px) {
+    .about-content,
+    .values-grid,
+    .stats-grid,
+    .card-grid,
+    .features-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+}
+
+/* Ensure buttons are full width on mobile */
+@media (max-width: 768px) {
+    .btn,
+    a.btn,
+    button.btn {
+        width: 100% !important;
+        display: block !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Fix button containers */
+    div[style*="display: flex"] .btn {
+        margin: 0.5rem 0 !important;
+    }
+}
+
+/* Fix image containers */
+@media (max-width: 768px) {
+    .about-image,
+    .card-image,
+    .property-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 250px !important;
+        max-height: 400px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image,
+    .card-image,
+    .property-image {
+        min-height: 200px !important;
+        max-height: 300px !important;
+    }
+}
+
+/* Improve performance on mobile */
+@media (max-width: 768px) {
+    * {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}

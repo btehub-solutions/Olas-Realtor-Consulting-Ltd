@@ -1,0 +1,357 @@
+/* ===================================
+   QUICK FIXES FOR BROKEN ELEMENTS
+   Ensures everything works properly
+   =================================== */
+
+/* Fix button z-index for text visibility */
+.btn {
+    position: relative;
+    z-index: 1;
+}
+
+.btn * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure section-title works on all backgrounds */
+.section-title h2 {
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+/* Fix for pages without gradient backgrounds */
+.section-alt .section-title h2 {
+    background: linear-gradient(135deg, #00A86B 0%, #00D084 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Fallback for browsers that don't support background-clip */
+@supports not (background-clip: text) {
+    .section-title h2 {
+        color: #00A86B;
+        -webkit-text-fill-color: initial;
+    }
+}
+
+/* Fix nav-link visibility */
+.nav-link {
+    color: var(--dark-gray);
+    position: relative;
+    z-index: 1;
+}
+
+.nav-link:hover {
+    color: var(--primary-green);
+}
+
+.nav-link.active {
+    color: var(--primary-green);
+}
+
+/* Fix card content visibility */
+.card-content,
+.property-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fix form elements */
+.form-input,
+.form-textarea,
+.form-select {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fix footer text visibility */
+.footer * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure hero content is visible */
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Fix property badge */
+.property-badge {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fix testimonial content */
+.testimonial-card * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fix feature box content */
+.feature-box * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fix value card content */
+.value-card * {
+    position: relative;
+    z-index: 2;
+}
+
+.value-card {
+    background: white !important;
+}
+
+.value-title {
+    color: var(--primary-green) !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.value-text {
+    color: var(--gray) !important;
+    line-height: 1.8;
+}
+
+.value-icon {
+    color: white !important;
+    background: linear-gradient(135deg, #00A86B 0%, #00D084 100%) !important;
+}
+
+/* Ensure values grid is visible */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Fix stat box content */
+.stat-box * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure all text is readable */
+.card-title,
+.card-text,
+.property-title,
+.property-location,
+.property-price {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fix social icons */
+.social-icons a {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fix dropdown menu */
+.dropdown-menu {
+    background: white;
+    z-index: 100;
+}
+
+/* Fix mobile menu */
+.nav-menu {
+    background: white;
+}
+
+/* Ensure buttons work on all backgrounds */
+.btn-secondary {
+    position: relative;
+}
+
+/* Fix for white text on white background */
+.section-alt .btn-secondary {
+    background: linear-gradient(135deg, #C41E3A 0%, #E63946 100%);
+    color: white;
+    border: 2px solid #C41E3A;
+}
+
+.section-alt .btn-secondary:hover {
+    background: linear-gradient(135deg, #E63946 0%, #C41E3A 100%);
+    border-color: #E63946;
+}
+
+/* Fix contact info visibility */
+.contact-info-item * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fix CTA buttons */
+.cta-button {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure preloader works */
+.preloader {
+    z-index: 9999;
+}
+
+/* Fix scroll buttons */
+.scroll-to-top,
+.whatsapp-float {
+    z-index: 999;
+}
+
+/* Fix modal */
+.modal {
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    z-index: 1001;
+}
+
+/* Ensure all interactive elements are clickable */
+a, button, input, select, textarea {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fix any overflow issues */
+.card,
+.property-card,
+.feature-box,
+.testimonial-card,
+.value-card {
+    overflow: hidden;
+}
+
+/* Ensure images don't break layout */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Fix any text selection issues */
+::selection {
+    background: rgba(0, 168, 107, 0.3);
+    color: inherit;
+}
+
+::-moz-selection {
+    background: rgba(0, 168, 107, 0.3);
+    color: inherit;
+}
+
+/* Fix focus states */
+*:focus {
+    outline: 2px solid rgba(0, 168, 107, 0.5);
+    outline-offset: 2px;
+}
+
+button:focus,
+a:focus {
+    outline: 2px solid rgba(0, 168, 107, 0.5);
+    outline-offset: 2px;
+}
+
+/* Ensure smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fix any layout shifts */
+* {
+    box-sizing: border-box;
+}
+
+/* Prevent horizontal scroll */
+body {
+    overflow-x: hidden;
+}
+
+/* Fix container widths */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Ensure sections have proper spacing */
+.section {
+    padding: 80px 20px;
+    position: relative;
+}
+
+/* Fix section-alt background */
+.section-alt {
+    background: #F8F9FA;
+}
+
+/* Ensure all text in cards is visible */
+.card h3,
+.card p,
+.value-card h3,
+.value-card p,
+.feature-box h3,
+.feature-box p {
+    color: inherit;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Fix section titles with inline styles */
+.section-title h2[style] {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    background-clip: initial !important;
+    color: #00A86B !important;
+}
+
+/* Fix decorative lines under titles */
+.section-title div[style*="width: 80px"] {
+    width: 80px !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #00A86B 0%, #C41E3A 100%) !important;
+    margin: 1rem auto 0 !important;
+    border-radius: 2px !important;
+    display: block !important;
+}
+
+/* Fix about-content with inline styles */
+.about-content[style*="background: white"] {
+    background: white !important;
+    padding: 3rem !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(0, 168, 107, 0.1) !important;
+}
+
+/* Fix about-text paragraphs */
+.about-text p[style] {
+    color: #6C757D !important;
+    line-height: 1.8 !important;
+}
+
+/* Fix quote/italic paragraph */
+.about-text div[style*="border-left"] p {
+    color: #2D3436 !important;
+    font-style: italic !important;
+}
+
+/* Fix hero height */
+.hero {
+    min-height: 500px;
+}
+
+/* Ensure all content is centered */
+.hero-content,
+.section-title {
+    text-align: center;
+}
