@@ -47,10 +47,7 @@ function initActiveLinks() {
         const linkPage = link.getAttribute('href');
         
         if (linkPage === currentPage || 
-            (currentPage === '' && linkPage === 'index.html') ||
-            (currentPage === 'property-sales.html' && linkPage === 'services.html') ||
-            (currentPage === 'letting-rentals.html' && linkPage === 'services.html') ||
-            (currentPage === 'ict-training.html' && linkPage === 'services.html')) {
+            (currentPage === '' && linkPage === 'index.html')) {
             link.classList.add('active');
         }
     });
