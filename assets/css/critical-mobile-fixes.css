@@ -206,6 +206,25 @@ body {
     .hero p {
         font-size: 1rem !important;
     }
+    
+    /* Fix scroll down indicator on mobile */
+    .scroll-indicator {
+        display: none !important;
+    }
+    
+    .scroll-indicator > div {
+        bottom: 15px !important;
+        font-size: 0.75rem !important;
+    }
+    
+    .scroll-indicator p {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    
+    .scroll-indicator i {
+        font-size: 1rem !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -219,6 +238,11 @@ body {
     
     .hero p {
         font-size: 0.95rem !important;
+    }
+    
+    /* Hide scroll indicator completely on small mobile */
+    .scroll-indicator {
+        display: none !important;
     }
 }
 
@@ -393,6 +417,21 @@ body {
     .property-content {
         padding: 1.25rem !important;
     }
+    
+    /* Fix property badge on mobile */
+    .property-badge {
+        position: absolute !important;
+        top: 0.5rem !important;
+        right: 0.5rem !important;
+        padding: 0.35rem 0.7rem !important;
+        font-size: 0.75rem !important;
+        border-radius: 6px !important;
+        white-space: nowrap !important;
+        z-index: 10 !important;
+        max-width: calc(100% - 1rem) !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -403,6 +442,15 @@ body {
     .card-content,
     .property-content {
         padding: 1rem !important;
+    }
+    
+    /* Further reduce property badge size on small mobile */
+    .property-badge {
+        top: 0.4rem !important;
+        right: 0.4rem !important;
+        padding: 0.3rem 0.6rem !important;
+        font-size: 0.7rem !important;
+        border-radius: 5px !important;
     }
 }
 

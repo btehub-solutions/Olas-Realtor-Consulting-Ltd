@@ -163,15 +163,17 @@ function initPropertyFilter() {
         resultsDiv.textContent = `Showing ${visibleCount} of ${properties.length} properties`;
     }
 
-    searchInput?.addEventListener('input', filterProperties);
-    typeFilter?.addEventListener('change', filterProperties);
-    priceFilter?.addEventListener('change', filterProperties);
-    resetBtn?.addEventListener('click', () => {
-        searchInput.value = '';
-        typeFilter.value = '';
-        priceFilter.value = '';
-        filterProperties();
-    });
+    if (searchInput) searchInput.addEventListener('input', filterProperties);
+    if (typeFilter) typeFilter.addEventListener('change', filterProperties);
+    if (priceFilter) priceFilter.addEventListener('change', filterProperties);
+    if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+            if (searchInput) searchInput.value = '';
+            if (typeFilter) typeFilter.value = '';
+            if (priceFilter) priceFilter.value = '';
+            filterProperties();
+        });
+    }
 }
 
 // 4. MORTGAGE CALCULATOR
@@ -279,34 +281,40 @@ function initMortgageCalculator() {
     const closeBtn = document.getElementById('close-calculator');
     const calculateBtn = document.getElementById('calculate-btn');
 
-    closeBtn?.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            if (modal) modal.style.display = 'none';
+        });
+    }
 
-    modal?.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
 
-    calculateBtn?.addEventListener('click', () => {
-        const price = parseFloat(document.getElementById('calc-price').value);
-        const downPercent = parseFloat(document.getElementById('calc-down').value);
-        const rate = parseFloat(document.getElementById('calc-rate').value) / 100 / 12;
-        const years = parseFloat(document.getElementById('calc-years').value);
-        const months = years * 12;
+    if (calculateBtn) {
+        calculateBtn.addEventListener('click', () => {
+            const price = parseFloat(document.getElementById('calc-price').value);
+            const downPercent = parseFloat(document.getElementById('calc-down').value);
+            const rate = parseFloat(document.getElementById('calc-rate').value) / 100 / 12;
+            const years = parseFloat(document.getElementById('calc-years').value);
+            const months = years * 12;
 
-        const downPayment = price * (downPercent / 100);
-        const loanAmount = price - downPayment;
-        const monthlyPayment = loanAmount * (rate * Math.pow(1 + rate, months)) / (Math.pow(1 + rate, months) - 1);
-        const totalPayment = monthlyPayment * months;
-        const totalInterest = totalPayment - loanAmount;
+            const downPayment = price * (downPercent / 100);
+            const loanAmount = price - downPayment;
+            const monthlyPayment = loanAmount * (rate * Math.pow(1 + rate, months)) / (Math.pow(1 + rate, months) - 1);
+            const totalPayment = monthlyPayment * months;
+            const totalInterest = totalPayment - loanAmount;
 
-        document.getElementById('monthly-payment').textContent = '₦' + monthlyPayment.toLocaleString('en-NG', { maximumFractionDigits: 0 });
-        document.getElementById('total-interest').textContent = '₦' + totalInterest.toLocaleString('en-NG', { maximumFractionDigits: 0 });
-        document.getElementById('total-payment').textContent = '₦' + totalPayment.toLocaleString('en-NG', { maximumFractionDigits: 0 });
-        document.getElementById('calc-results').style.display = 'block';
-    });
+            document.getElementById('monthly-payment').textContent = '₦' + monthlyPayment.toLocaleString('en-NG', { maximumFractionDigits: 0 });
+            document.getElementById('total-interest').textContent = '₦' + totalInterest.toLocaleString('en-NG', { maximumFractionDigits: 0 });
+            document.getElementById('total-payment').textContent = '₦' + totalPayment.toLocaleString('en-NG', { maximumFractionDigits: 0 });
+            document.getElementById('calc-results').style.display = 'block';
+        });
+    }
 }
 
 // 5. TESTIMONIAL STAR RATINGS
@@ -331,14 +339,20 @@ function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            if (href !== '#' && href !== '#!') {
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+            // Only handle valid internal links
+            if (href && href !== '#' && href !== '#!' && href.length > 1) {
+                try {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                } catch (error) {
+                    // Invalid selector, skip
+                    console.log('Invalid selector:', href);
                 }
             }
         });
