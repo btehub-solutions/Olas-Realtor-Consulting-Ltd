@@ -147,18 +147,43 @@ class OlasChatbot {
         `;
 
         document.body.insertAdjacentHTML('beforeend', chatbotHTML);
+        
+        // Force fixed positioning with inline styles for mobile
+        const chatbotContainer = document.querySelector('.chatbot-container');
+        if (chatbotContainer) {
+            chatbotContainer.style.position = 'fixed';
+            chatbotContainer.style.zIndex = '10000';
+        }
+        
+        const chatbotWindow = document.getElementById('chatbotWindow');
+        if (chatbotWindow) {
+            chatbotWindow.style.position = 'fixed';
+            chatbotWindow.style.zIndex = '10000';
+        }
     }
 
     attachEventListeners() {
         const toggle = document.getElementById('chatbotToggle');
         const sendBtn = document.getElementById('chatbotSend');
         const input = document.getElementById('chatbotInput');
+        const header = document.querySelector('.chatbot-header');
 
         toggle.addEventListener('click', () => this.toggleChat());
         sendBtn.addEventListener('click', () => this.sendMessage());
         input.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') this.sendMessage();
         });
+        
+        // Close chatbot when clicking header on mobile (close button area)
+        if (header && window.innerWidth <= 768) {
+            header.addEventListener('click', (e) => {
+                // Only close if clicking on the right side (close button area)
+                const rect = header.getBoundingClientRect();
+                if (e.clientX > rect.right - 60) {
+                    this.toggleChat();
+                }
+            });
+        }
     }
 
     toggleChat() {

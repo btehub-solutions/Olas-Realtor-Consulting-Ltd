@@ -475,3 +475,11 @@
     border-radius: 2px;
     margin: 3rem 0;
 }
+
+/* Mobile Fixed Positioning Enforcement */
+@media (max-width: 768px) {
+    .whatsapp-float,
+    .scroll-to-top {
+        position: fixed !important;
+    }
+}

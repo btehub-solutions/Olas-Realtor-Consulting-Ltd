@@ -490,19 +490,24 @@
     
     /* WhatsApp and scroll buttons */
     .whatsapp-float {
+        position: fixed !important;
         width: 50px;
         height: 50px;
         font-size: 1.5rem;
-        bottom: 80px;
-        right: 15px;
+        bottom: 80px !important;
+        right: 15px !important;
+        z-index: 9997 !important;
     }
     
     .scroll-to-top {
+        position: fixed !important;
         width: 45px;
         height: 45px;
         font-size: 1.2rem;
-        bottom: 20px;
-        right: 15px;
+        bottom: 10px !important;
+        left: 15px !important;
+        right: auto !important;
+        z-index: 9998 !important;
     }
 }
 

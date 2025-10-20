@@ -292,6 +292,11 @@ function initScrollToTop() {
     scrollBtn.className = 'scroll-to-top';
     scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
     scrollBtn.setAttribute('aria-label', 'Scroll to top');
+    
+    // Force fixed positioning with inline styles for mobile
+    scrollBtn.style.position = 'fixed';
+    scrollBtn.style.zIndex = '9998';
+    
     document.body.appendChild(scrollBtn);
     
     // Show/hide on scroll
@@ -324,6 +329,11 @@ function initWhatsAppButton() {
     whatsappBtn.rel = 'noopener noreferrer';
     whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
     whatsappBtn.setAttribute('aria-label', 'Contact us on WhatsApp');
+    
+    // Force fixed positioning with inline styles for mobile
+    whatsappBtn.style.position = 'fixed';
+    whatsappBtn.style.zIndex = '9999';
+    
     document.body.appendChild(whatsappBtn);
 }
 

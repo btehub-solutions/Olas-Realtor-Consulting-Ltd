@@ -468,4 +468,103 @@ body {
     *::after {
         box-sizing: border-box !important;
     }
+    
+    /* CRITICAL: Ensure body doesn't interfere with fixed positioning */
+    html, body {
+        position: relative !important;
+        transform: none !important;
+        -webkit-transform: none !important;
+    }
+    
+    /* CRITICAL: Fix floating buttons to stay visible during scroll */
+    .whatsapp-float,
+    .chatbot-container,
+    .scroll-to-top {
+        position: fixed !important;
+        transform: translateZ(0) !important;
+        -webkit-transform: translateZ(0) !important;
+        backface-visibility: hidden !important;
+        -webkit-backface-visibility: hidden !important;
+    }
+    
+    /* Chatbot has highest priority - Right side popup */
+    .chatbot-container {
+        position: fixed !important;
+        bottom: 15px !important;
+        right: 10px !important;
+        z-index: 10000 !important;
+    }
+    
+    .chatbot-window {
+        position: fixed !important;
+        bottom: 80px !important;
+        right: 10px !important;
+        width: 90vw !important;
+        max-width: 360px !important;
+        height: 70vh !important;
+        max-height: 500px !important;
+        border-radius: 16px !important;
+        z-index: 10000 !important;
+    }
+    
+    .chatbot-messages {
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    /* CRITICAL: Make input area HIGHLY VISIBLE */
+    .chatbot-input-area {
+        position: relative !important;
+        background: #e2e8f0 !important;
+        border-top: 3px solid #cbd5e0 !important;
+        padding: 16px 12px !important;
+        flex-shrink: 0 !important;
+        z-index: 100 !important;
+        display: flex !important;
+        gap: 10px !important;
+        align-items: center !important;
+        min-height: 70px !important;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .chatbot-input {
+        flex: 1 !important;
+        font-size: 16px !important;
+        padding: 14px 18px !important;
+        border: 3px solid #006B3C !important;
+        background: white !important;
+        color: #2d3748 !important;
+        border-radius: 25px !important;
+        min-height: 48px !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .chatbot-send-btn {
+        width: 48px !important;
+        height: 48px !important;
+        background: linear-gradient(135deg, #006B3C 0%, #008F4F 100%) !important;
+        color: white !important;
+        border: none !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* WhatsApp button positioned above chatbot */
+    .whatsapp-float {
+        bottom: 80px !important;
+        right: 15px !important;
+        z-index: 9999 !important;
+    }
+    
+    /* Scroll-to-top positioned on LEFT side to avoid overlap */
+    .scroll-to-top {
+        bottom: 10px !important;
+        left: 15px !important;
+        right: auto !important;
+        z-index: 9998 !important;
+    }
 }
