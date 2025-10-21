@@ -128,13 +128,17 @@
     
     .nav-menu li {
         width: 100%;
-        border-bottom: 1px solid var(--light-gray);
         padding: 1rem 0;
     }
     
     .nav-link {
         display: block;
         width: 100%;
+    }
+    
+    /* Remove underline effect on mobile */
+    .nav-link::after {
+        display: none;
     }
     
     /* Dropdown Mobile */
