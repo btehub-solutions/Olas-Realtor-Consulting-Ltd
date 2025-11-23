@@ -79,8 +79,14 @@
 }
 
 /* Fix property badge */
-.property-badge {
+.property-image {
     position: relative;
+}
+
+.property-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     z-index: 2;
 }
 
