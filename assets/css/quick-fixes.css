@@ -5,142 +5,142 @@
 
 /* Fix button z-index for text visibility */
 .btn {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .btn * {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 /* Ensure section-title works on all backgrounds */
 .section-title h2 {
-    display: inline-block;
-    padding-bottom: 20px;
+  display: inline-block;
+  padding-bottom: 20px;
 }
 
 /* Fix for pages without gradient backgrounds */
 .section-alt .section-title h2 {
-    background: linear-gradient(135deg, #00A86B 0%, #00D084 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  background: linear-gradient(135deg, #00a86b 0%, #00d084 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Fallback for browsers that don't support background-clip */
 @supports not (background-clip: text) {
-    .section-title h2 {
-        color: #00A86B;
-        -webkit-text-fill-color: initial;
-    }
+  .section-title h2 {
+    color: #00a86b;
+    -webkit-text-fill-color: initial;
+  }
 }
 
 /* Fix nav-link visibility */
 .nav-link {
-    color: var(--dark-gray);
-    position: relative;
-    z-index: 1;
+  color: var(--dark-gray);
+  position: relative;
+  z-index: 1;
 }
 
 .nav-link:hover {
-    color: var(--primary-green);
+  color: var(--primary-green);
 }
 
 .nav-link.active {
-    color: var(--primary-green);
+  color: var(--primary-green);
 }
 
 /* Fix card content visibility */
 .card-content,
 .property-content {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Fix form elements */
 .form-input,
 .form-textarea,
 .form-select {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Fix footer text visibility */
 .footer * {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Ensure hero content is visible */
 .hero-content {
-    position: relative;
-    z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 
 /* Fix property badge */
 .property-image {
-    position: relative;
+  position: relative;
 }
 
 .property-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 2;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
 }
 
 /* Fix testimonial content */
 .testimonial-card * {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 /* Fix feature box content */
 .feature-box * {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 /* Fix value card content */
 .value-card * {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .value-card {
-    background: white !important;
+  background: white !important;
 }
 
 .value-title {
-    color: var(--primary-green) !important;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+  color: var(--primary-green) !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .value-text {
-    color: var(--gray) !important;
-    line-height: 1.8;
+  color: var(--gray) !important;
+  line-height: 1.8;
 }
 
 .value-icon {
-    color: white !important;
-    background: linear-gradient(135deg, #00A86B 0%, #00D084 100%) !important;
+  color: white !important;
+  background: linear-gradient(135deg, #00a86b 0%, #00d084 100%) !important;
 }
 
 /* Ensure values grid is visible */
 .values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 /* Fix stat box content */
 .stat-box * {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 /* Ensure all text is readable */
@@ -149,81 +149,85 @@
 .property-title,
 .property-location,
 .property-price {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 /* Fix social icons */
 .social-icons a {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Fix dropdown menu */
 .dropdown-menu {
-    background: white;
-    z-index: 100;
+  background: white;
+  z-index: 100;
 }
 
 /* Fix mobile menu */
 .nav-menu {
-    background: white;
+  background: white;
 }
 
 /* Ensure buttons work on all backgrounds */
 .btn-secondary {
-    position: relative;
+  position: relative;
 }
 
 /* Fix for white text on white background */
 .section-alt .btn-secondary {
-    background: linear-gradient(135deg, #C41E3A 0%, #E63946 100%);
-    color: white;
-    border: 2px solid #C41E3A;
+  background: linear-gradient(135deg, #c41e3a 0%, #e63946 100%);
+  color: white;
+  border: 2px solid #c41e3a;
 }
 
 .section-alt .btn-secondary:hover {
-    background: linear-gradient(135deg, #E63946 0%, #C41E3A 100%);
-    border-color: #E63946;
+  background: linear-gradient(135deg, #e63946 0%, #c41e3a 100%);
+  border-color: #e63946;
 }
 
 /* Fix contact info visibility */
 .contact-info-item * {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 /* Fix CTA buttons */
 .cta-button {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Ensure preloader works */
 .preloader {
-    z-index: 9999;
+  z-index: 9999;
 }
 
 /* Fix scroll buttons */
 .scroll-to-top,
 .whatsapp-float {
-    z-index: 999;
+  z-index: 999;
 }
 
 /* Fix modal */
 .modal {
-    z-index: 1000;
+  z-index: 1000;
 }
 
 .modal-content {
-    position: relative;
-    z-index: 1001;
+  position: relative;
+  z-index: 1001;
 }
 
 /* Ensure all interactive elements are clickable */
-a, button, input, select, textarea {
-    position: relative;
-    z-index: 1;
+a,
+button,
+input,
+select,
+textarea {
+  position: relative;
+  z-index: 1;
 }
 
 /* Fix any overflow issues */
@@ -232,71 +236,71 @@ a, button, input, select, textarea {
 .feature-box,
 .testimonial-card,
 .value-card {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* Ensure images don't break layout */
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Fix any text selection issues */
 ::selection {
-    background: rgba(0, 168, 107, 0.3);
-    color: inherit;
+  background: rgba(0, 168, 107, 0.3);
+  color: inherit;
 }
 
 ::-moz-selection {
-    background: rgba(0, 168, 107, 0.3);
-    color: inherit;
+  background: rgba(0, 168, 107, 0.3);
+  color: inherit;
 }
 
 /* Fix focus states */
 *:focus {
-    outline: 2px solid rgba(0, 168, 107, 0.5);
-    outline-offset: 2px;
+  outline: 2px solid rgba(0, 168, 107, 0.5);
+  outline-offset: 2px;
 }
 
 button:focus,
 a:focus {
-    outline: 2px solid rgba(0, 168, 107, 0.5);
-    outline-offset: 2px;
+  outline: 2px solid rgba(0, 168, 107, 0.5);
+  outline-offset: 2px;
 }
 
 /* Ensure smooth scrolling */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Fix any layout shifts */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Prevent horizontal scroll */
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 /* Fix container widths */
 .container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Ensure sections have proper spacing */
 .section {
-    padding: 80px 20px;
-    position: relative;
+  padding: 80px 20px;
+  position: relative;
 }
 
 /* Fix section-alt background */
 .section-alt {
-    background: #F8F9FA;
+  background: #f8f9fa;
 }
 
 /* Ensure all text in cards is visible */
@@ -306,58 +310,67 @@ body {
 .value-card p,
 .feature-box h3,
 .feature-box p {
-    color: inherit;
-    opacity: 1;
-    visibility: visible;
+  color: inherit;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Fix section titles with inline styles */
 .section-title h2[style] {
-    background: none !important;
-    -webkit-background-clip: initial !important;
-    -webkit-text-fill-color: initial !important;
-    background-clip: initial !important;
-    color: #00A86B !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  color: #00a86b !important;
 }
 
 /* Fix decorative lines under titles */
 .section-title div[style*="width: 80px"] {
-    width: 80px !important;
-    height: 4px !important;
-    background: linear-gradient(90deg, #00A86B 0%, #C41E3A 100%) !important;
-    margin: 1rem auto 0 !important;
-    border-radius: 2px !important;
-    display: block !important;
+  width: 80px !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, #00a86b 0%, #c41e3a 100%) !important;
+  margin: 1rem auto 0 !important;
+  border-radius: 2px !important;
+  display: block !important;
 }
 
 /* Fix about-content with inline styles */
 .about-content[style*="background: white"] {
-    background: white !important;
-    padding: 3rem !important;
-    border-radius: 20px !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
-    border: 1px solid rgba(0, 168, 107, 0.1) !important;
+  background: white !important;
+  padding: 3rem !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid rgba(0, 168, 107, 0.1) !important;
 }
 
 /* Fix about-text paragraphs */
 .about-text p[style] {
-    color: #6C757D !important;
-    line-height: 1.8 !important;
+  color: #6c757d !important;
+  line-height: 1.8 !important;
 }
 
 /* Fix quote/italic paragraph */
 .about-text div[style*="border-left"] p {
-    color: #2D3436 !important;
-    font-style: italic !important;
+  color: #2d3436 !important;
+  font-style: italic !important;
 }
 
 /* Fix hero height */
 .hero {
-    min-height: 500px;
+  min-height: 500px;
 }
 
 /* Ensure all content is centered */
 .hero-content,
 .section-title {
-    text-align: center;
+  text-align: center;
+}
+
+/* Fix property features layout on desktop */
+@media (min-width: 769px) {
+  .property-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 }
