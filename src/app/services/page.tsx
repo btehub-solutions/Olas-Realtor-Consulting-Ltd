@@ -105,7 +105,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="section" style={{ paddingTop: '3rem', paddingBottom: '3.5rem' }}>
+      <section className="section" style={{ padding: '75px 20px', backgroundColor: '#FFFFFF' }}>
         <div className="container">
           <div className="section-title">
             <h2>Our Core Capabilities</h2>
@@ -210,7 +210,7 @@ export default function Services() {
       </section>
 
       {/* Why Choose Our Services (Parity with Homepage) */}
-      <section className="section" style={{ backgroundColor: '#F8FAF9', paddingTop: '3.5rem', paddingBottom: '3.5rem' }}>
+      <section className="section" style={{ backgroundColor: '#F6F5F2', borderTop: '1px solid rgba(0, 0, 0, 0.05)', borderBottom: '1px solid rgba(0, 0, 0, 0.05)', padding: '75px 20px' }}>
         <div className="container">
           <div className="section-title">
             <h2>The Olas Realtor Advantage</h2>
@@ -254,7 +254,7 @@ export default function Services() {
       </section>
 
       {/* Standardized Light CTA Section */}
-      <section className="home-cta-section">
+      <section className="home-cta-section" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid rgba(0, 0, 0, 0.06)', padding: '75px 20px' }}>
         <div className="container">
           <h2 className="home-cta-title">Ready to Discuss Your Property Needs?</h2>
           <p className="home-cta-desc">

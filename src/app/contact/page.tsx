@@ -141,7 +141,7 @@ export default function Contact() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="section" style={{ paddingTop: '3.5rem', paddingBottom: '4rem' }}>
+      <section className="section" style={{ padding: '75px 20px', backgroundColor: '#F6F5F2', borderTop: '1px solid rgba(0, 0, 0, 0.05)' }}>
         <div className="container">
           <div
             style={{
@@ -390,7 +390,7 @@ export default function Contact() {
       </section>
 
       {/* Standardized Light CTA Section */}
-      <section className="home-cta-section">
+      <section className="home-cta-section" style={{ padding: '75px 20px', backgroundColor: '#FFFFFF', borderTop: '1px solid rgba(0, 0, 0, 0.06)' }}>
         <div className="container">
           <h2 className="home-cta-title">Prefer an In-Person Consultation?</h2>
           <p className="home-cta-desc">

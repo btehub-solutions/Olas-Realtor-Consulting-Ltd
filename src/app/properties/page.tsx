@@ -30,7 +30,7 @@ export default function Properties() {
       </section>
 
       {/* Portfolio Media Showcase */}
-      <section className="section" style={{ padding: '50px 20px', backgroundColor: '#FFFFFF' }}>
+      <section className="section" style={{ padding: '65px 20px', backgroundColor: '#F6F5F2', borderTop: '1px solid rgba(0, 0, 0, 0.05)' }}>
         <div className="container max-w-[1300px] mx-auto">
           <div
             style={{
