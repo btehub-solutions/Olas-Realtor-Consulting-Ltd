@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Poppins, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
 import Navbar from '@/components/layout/Navbar';
@@ -17,6 +17,13 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '600', '700', '800'],
   variable: '--font-poppins',
+  display: 'swap',
+});
+
+const playfair = Playfair_Display({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-playfair',
   display: 'swap',
 });
 
@@ -221,7 +228,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en-NG" suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en-NG" suppressHydrationWarning className={`${inter.variable} ${poppins.variable} ${playfair.variable}`}>
       <head>
         <script
           type="application/ld+json"

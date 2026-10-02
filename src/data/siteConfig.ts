@@ -26,8 +26,6 @@ export const siteConfig = {
     { label: 'About', href: '/about' },
     { label: 'Services', href: '/services' },
     { label: 'Properties', href: '/properties' },
-    { label: 'Rentals', href: '/letting-rentals' },
-    { label: 'ICT Training', href: '/ict-training' },
     { label: 'Contact', href: '/contact' },
   ],
   socials: {
