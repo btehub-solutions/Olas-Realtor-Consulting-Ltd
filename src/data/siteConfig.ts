@@ -1,0 +1,40 @@
+export const siteConfig = {
+  name: 'Olas Realtor Consulting Ltd',
+  shortName: 'Olas Realtor',
+  tagline: 'Your Trusted Partner in Nigerian Real Estate',
+  description:
+    'Premier real estate consulting firm in Abeokuta, Ogun State, Nigeria. Specializing in verified property sales, lettings & rentals, property management, and professional ICT training.',
+  address: '48, Olayiwola Bankole Street, Oluwo, Abeokuta, Ogun State, Nigeria',
+  phones: ['+2348164220387', '+2348055800325'],
+  phoneDisplay: ['08164220387', '08055800325'],
+  whatsapp: '2348164220387',
+  whatsappUrl: 'https://wa.me/2348164220387',
+  email: 'olasarealtor@gmail.com',
+  hours: {
+    weekdays: 'Monday - Friday: 9:00 AM - 6:00 PM',
+    saturday: 'Saturday: 10:00 AM - 4:00 PM',
+    sunday: 'Sunday: Closed',
+  },
+  stats: [
+    { value: '15+', label: 'Years in Business' },
+    { value: '500+', label: 'Properties Sold' },
+    { value: '1,000+', label: 'Satisfied Clients' },
+    { value: '200+', label: 'Professionals Trained' },
+  ],
+  navLinks: [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'Properties', href: '/properties' },
+    { label: 'Rentals', href: '/letting-rentals' },
+    { label: 'ICT Training', href: '/ict-training' },
+    { label: 'Contact', href: '/contact' },
+  ],
+  socials: {
+    facebook: 'https://facebook.com',
+    instagram: 'https://instagram.com',
+    twitter: 'https://twitter.com',
+    linkedin: 'https://linkedin.com',
+    tiktok: 'https://tiktok.com',
+  },
+};
