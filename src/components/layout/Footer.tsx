@@ -19,6 +19,11 @@ export default function Footer() {
     alert('Thank you for subscribing to our newsletter!');
   };
 
+  const handleLinkedInClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    alert('Coming soon: We are yet to connect our LinkedIn.');
+  };
+
   return (
     <footer className="footer bg-[#1F2421] text-white pt-9 pb-6 px-6 sm:px-8 relative text-left" style={{ overflow: 'visible' }}>
       {/* Single Clean Tricolor Top Line */}
@@ -41,16 +46,16 @@ export default function Footer() {
           </p>
           <div className="footer-social-row" style={{ justifyContent: 'flex-start' }}>
             <a
-              href="https://www.linkedin.com/in/olas-realtor-consulting-ltd-626284373"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="footer-social-box"
+              href="#linkedin"
+              onClick={handleLinkedInClick}
+              aria-label="LinkedIn (Coming Soon)"
+              title="Coming Soon: We are yet to connect our LinkedIn"
+              className="footer-social-box cursor-pointer"
             >
               <FaLinkedinIn size={14} />
             </a>
             <a
-              href="https://www.facebook.com/olasrealtor"
+              href="https://www.facebook.com/share/19nuQcNWo4/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"

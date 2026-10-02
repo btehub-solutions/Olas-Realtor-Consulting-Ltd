@@ -31,10 +31,10 @@ export const siteConfig = {
     { label: 'Contact', href: '/contact' },
   ],
   socials: {
-    facebook: 'https://facebook.com',
+    facebook: 'https://www.facebook.com/share/19nuQcNWo4/',
     instagram: 'https://instagram.com',
     twitter: 'https://twitter.com',
-    linkedin: 'https://linkedin.com',
+    linkedin: '#',
     tiktok: 'https://tiktok.com',
   },
 };

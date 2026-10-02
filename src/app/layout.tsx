@@ -146,13 +146,11 @@ export default function RootLayout({
           jobTitle: 'Founder & CEO',
           url: 'https://olasrealtorconsulting.com/about',
           sameAs: [
-            'https://www.linkedin.com/in/olas-realtor-consulting-ltd-626284373',
             'https://x.com/is_ola001',
           ],
         },
         sameAs: [
-          'https://www.linkedin.com/in/olas-realtor-consulting-ltd-626284373',
-          'https://www.facebook.com/olasrealtor',
+          'https://www.facebook.com/share/19nuQcNWo4/',
           'https://www.instagram.com/is_olasrealtor',
           'http://tiktok.com/@is_olasrealtor',
           'https://x.com/is_ola001',
