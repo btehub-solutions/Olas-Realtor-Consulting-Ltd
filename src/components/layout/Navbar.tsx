@@ -45,7 +45,7 @@ export default function Navbar() {
     { number: '01', label: 'Home', href: '/' },
     { number: '02', label: 'About', href: '/about' },
     { number: '03', label: 'Services', href: '/services' },
-    { number: '04', label: 'Properties', href: '/properties' },
+    { number: '04', label: 'Portfolio', href: '/properties' },
     { number: '05', label: 'Contact', href: '/contact' },
   ];
 

@@ -93,32 +93,33 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="section" style={{ padding: '75px 20px', backgroundColor: '#141815', color: '#FFFFFF' }}>
+      {/* Stats Section */}
+      <section className="section" style={{ padding: '75px 20px', backgroundColor: '#FAFBFC', borderTop: '1px solid rgba(0, 0, 0, 0.05)', borderBottom: '1px solid rgba(0, 0, 0, 0.05)' }}>
         <div className="container">
           <div className="section-title">
-            <h2 style={{ color: '#FFFFFF' }}>Our Impact in Numbers</h2>
-            <p style={{ color: '#D1D5DB' }}>Proven track record of excellence and client satisfaction</p>
+            <h2>Our Impact in Numbers</h2>
+            <p>Proven track record of excellence and client satisfaction</p>
           </div>
           
           <div className="stats-grid">
-            <div className="stat-box" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', padding: '2rem 1.5rem', borderRadius: '10px', border: '1px solid rgba(255, 255, 255, 0.1)', textAlign: 'center' }}>
+            <div className="stat-box" style={{ backgroundColor: '#FFFFFF', padding: '2rem 1.5rem', borderRadius: '10px', border: '1px solid rgba(0, 0, 0, 0.08)', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.04)', textAlign: 'center' }}>
               <div className="stat-number" style={{ fontSize: '2.5rem', fontWeight: 800, color: '#00A86B', marginBottom: '0.35rem' }}>15+</div>
-              <div className="stat-label" style={{ fontSize: '0.9rem', color: '#E5E7EB', fontWeight: 500 }}>Years in Business</div>
+              <div className="stat-label" style={{ fontSize: '0.9rem', color: '#4B5563', fontWeight: 600 }}>Years in Business</div>
             </div>
             
-            <div className="stat-box" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', padding: '2rem 1.5rem', borderRadius: '10px', border: '1px solid rgba(255, 255, 255, 0.1)', textAlign: 'center' }}>
+            <div className="stat-box" style={{ backgroundColor: '#FFFFFF', padding: '2rem 1.5rem', borderRadius: '10px', border: '1px solid rgba(0, 0, 0, 0.08)', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.04)', textAlign: 'center' }}>
               <div className="stat-number" style={{ fontSize: '2.5rem', fontWeight: 800, color: '#C41E3A', marginBottom: '0.35rem' }}>500+</div>
-              <div className="stat-label" style={{ fontSize: '0.9rem', color: '#E5E7EB', fontWeight: 500 }}>Properties Sold</div>
+              <div className="stat-label" style={{ fontSize: '0.9rem', color: '#4B5563', fontWeight: 600 }}>Properties Sold</div>
             </div>
             
-            <div className="stat-box" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', padding: '2rem 1.5rem', borderRadius: '10px', border: '1px solid rgba(255, 255, 255, 0.1)', textAlign: 'center' }}>
+            <div className="stat-box" style={{ backgroundColor: '#FFFFFF', padding: '2rem 1.5rem', borderRadius: '10px', border: '1px solid rgba(0, 0, 0, 0.08)', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.04)', textAlign: 'center' }}>
               <div className="stat-number" style={{ fontSize: '2.5rem', fontWeight: 800, color: '#00A86B', marginBottom: '0.35rem' }}>1000+</div>
-              <div className="stat-label" style={{ fontSize: '0.9rem', color: '#E5E7EB', fontWeight: 500 }}>Satisfied Clients</div>
+              <div className="stat-label" style={{ fontSize: '0.9rem', color: '#4B5563', fontWeight: 600 }}>Satisfied Clients</div>
             </div>
             
-            <div className="stat-box" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', padding: '2rem 1.5rem', borderRadius: '10px', border: '1px solid rgba(255, 255, 255, 0.1)', textAlign: 'center' }}>
+            <div className="stat-box" style={{ backgroundColor: '#FFFFFF', padding: '2rem 1.5rem', borderRadius: '10px', border: '1px solid rgba(0, 0, 0, 0.08)', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.04)', textAlign: 'center' }}>
               <div className="stat-number" style={{ fontSize: '2.5rem', fontWeight: 800, color: '#C41E3A', marginBottom: '0.35rem' }}>200+</div>
-              <div className="stat-label" style={{ fontSize: '0.9rem', color: '#E5E7EB', fontWeight: 500 }}>Professionals Trained</div>
+              <div className="stat-label" style={{ fontSize: '0.9rem', color: '#4B5563', fontWeight: 600 }}>Professionals Trained</div>
             </div>
           </div>
         </div>

@@ -415,54 +415,55 @@ export default function Home() {
         </section>
 
         {/* SECTION 4: FOUNDER SPOTLIGHT & TITLE SECURITY GUARANTEE */}
-        <section className="section" style={{ padding: '75px 20px', backgroundColor: '#141815', color: '#FFFFFF' }}>
+        {/* SECTION 4: FOUNDER SPOTLIGHT & TITLE SECURITY GUARANTEE */}
+        <section className="section" style={{ padding: '75px 20px', backgroundColor: '#FAFBFC', borderTop: '1px solid rgba(0, 0, 0, 0.05)', borderBottom: '1px solid rgba(0, 0, 0, 0.05)' }}>
           <div className="container max-w-[1200px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
               {/* Left Box: Founder Quote */}
-              <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', padding: '2.25rem', borderRadius: '10px', border: '1px solid rgba(255, 255, 255, 0.1)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div style={{ backgroundColor: '#FFFFFF', padding: '2.25rem', borderRadius: '10px', border: '1px solid rgba(0, 0, 0, 0.08)', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.04)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
                   <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1.5px', color: '#00A86B' }}>Leadership Spotlight</span>
-                  <h3 style={{ fontSize: '1.45rem', fontWeight: 700, color: '#FFFFFF', marginTop: '0.4rem', marginBottom: '1rem', fontFamily: 'Poppins, sans-serif' }}>
+                  <h3 style={{ fontSize: '1.45rem', fontWeight: 700, color: '#1F2421', marginTop: '0.4rem', marginBottom: '1rem', fontFamily: 'Poppins, sans-serif' }}>
                     Driven by Transparency &amp; Generational Wealth
                   </h3>
-                  <blockquote style={{ fontSize: '0.95rem', fontStyle: 'italic', color: '#D1D5DB', lineHeight: 1.7, borderLeft: '3px solid #00A86B', paddingLeft: '1rem', marginBottom: '1.5rem' }}>
+                  <blockquote style={{ fontSize: '0.95rem', fontStyle: 'italic', color: '#4B5563', lineHeight: 1.7, borderLeft: '3px solid #00A86B', paddingLeft: '1rem', marginBottom: '1.5rem' }}>
                     &ldquo;Real estate success in Nigeria is built on absolute transparency, uncompromising title due diligence, and creating generational value for every client we serve.&rdquo;
                   </blockquote>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: 'auto', paddingTop: '1.25rem', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: '#00A86B', color: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '1.2rem', boxShadow: '0 0 16px rgba(0, 168, 107, 0.4)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: 'auto', paddingTop: '1.25rem', borderTop: '1px solid rgba(0, 0, 0, 0.06)' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: '#00A86B', color: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '1.2rem', boxShadow: '0 0 16px rgba(0, 168, 107, 0.3)' }}>
                     KD
                   </div>
                   <div>
-                    <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#FFFFFF', margin: 0 }}>Kolade Abiola Daramola</h4>
-                    <p style={{ fontSize: '0.8rem', color: '#9CA3AF', margin: 0 }}>Founder &amp; Managing Director</p>
+                    <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#1F2421', margin: 0 }}>Kolade Abiola Daramola</h4>
+                    <p style={{ fontSize: '0.8rem', color: '#6B7280', margin: 0 }}>Founder &amp; Managing Director</p>
                   </div>
                 </div>
               </div>
 
               {/* Right Box: Title Security Guarantee */}
-              <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', padding: '2.25rem', borderRadius: '10px', border: '1px solid rgba(255, 255, 255, 0.1)', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ backgroundColor: '#FFFFFF', padding: '2.25rem', borderRadius: '10px', border: '1px solid rgba(0, 0, 0, 0.08)', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.04)', display: 'flex', flexDirection: 'column' }}>
                 <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1.5px', color: '#C41E3A' }}>Title Security Assurance</span>
-                <h3 style={{ fontSize: '1.45rem', fontWeight: 700, color: '#FFFFFF', marginTop: '0.4rem', marginBottom: '1rem', fontFamily: 'Poppins, sans-serif' }}>
+                <h3 style={{ fontSize: '1.45rem', fontWeight: 700, color: '#1F2421', marginTop: '0.4rem', marginBottom: '1rem', fontFamily: 'Poppins, sans-serif' }}>
                   100% Legal Due Diligence Guarantee
                 </h3>
-                <p style={{ fontSize: '0.875rem', color: '#D1D5DB', lineHeight: 1.6, marginBottom: '1.25rem' }}>
+                <p style={{ fontSize: '0.875rem', color: '#4B5563', lineHeight: 1.6, marginBottom: '1.25rem' }}>
                   Every parcel of land and developed property listed under Olas Realtor Consulting undergoes rigorous land registry searches, survey verification, and title validation before onboarding.
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.5rem 0', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.875rem', color: '#F3F4F6', fontWeight: 500 }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.875rem', color: '#1F2421', fontWeight: 500 }}>
                     <FaCheckDouble style={{ color: '#00A86B', flexShrink: 0 }} />
                     <span>State Ministry Land Registry Verification</span>
                   </li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.875rem', color: '#F3F4F6', fontWeight: 500 }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.875rem', color: '#1F2421', fontWeight: 500 }}>
                     <FaCheckDouble style={{ color: '#00A86B', flexShrink: 0 }} />
                     <span>Registered Surveyor Coordinate Matching</span>
                   </li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.875rem', color: '#F3F4F6', fontWeight: 500 }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.875rem', color: '#1F2421', fontWeight: 500 }}>
                     <FaCheckDouble style={{ color: '#00A86B', flexShrink: 0 }} />
                     <span>Governor’s Consent &amp; C of O Regularization Support</span>
                   </li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.875rem', color: '#F3F4F6', fontWeight: 500 }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.875rem', color: '#1F2421', fontWeight: 500 }}>
                     <FaCheckDouble style={{ color: '#00A86B', flexShrink: 0 }} />
                     <span>Zero Encumbrance &amp; Third-Party Claim Guarantee</span>
                   </li>
@@ -478,13 +479,14 @@ export default function Home() {
                     justifyContent: 'center',
                     height: '42px',
                     borderRadius: '6px',
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                    color: '#FFFFFF',
-                    border: '1px solid rgba(255, 255, 255, 0.25)',
+                    backgroundColor: '#FFFFFF',
+                    color: '#1F2421',
+                    border: '1px solid rgba(0, 0, 0, 0.15)',
                     fontWeight: 600,
                     fontSize: '0.875rem',
                     textDecoration: 'none',
                     transition: 'all 0.2s ease',
+                    boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)',
                   }}
                 >
                   Learn About Our Governance

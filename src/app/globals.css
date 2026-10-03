@@ -5197,7 +5197,7 @@ footer.footer,
    LUXURY EDITORIAL MOBILE DRAWER NAVIGATION (WHITE / MILK)
    =================================================== */
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
     .navbar .nav-menu {
         display: none !important;
     }
@@ -5215,7 +5215,7 @@ footer.footer,
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 769px) {
     .mobile-luxury-drawer {
         display: none !important;
     }
@@ -5224,6 +5224,15 @@ footer.footer,
     }
     .navbar .nav-menu {
         display: flex !important;
+        position: static !important;
+        height: auto !important;
+        width: auto !important;
+        background: transparent !important;
+        flex-direction: row !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        gap: 1.5rem !important;
+        align-items: center !important;
     }
 }
 
@@ -5324,41 +5333,41 @@ footer.footer,
 
 .mobile-nav-item {
     display: flex !important;
-    align-items: baseline !important;
-    gap: 1.35rem !important;
-    padding: 1.15rem 0.25rem !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    padding: 0.95rem 0.25rem !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
     text-decoration: none !important;
     transition: all 0.2s ease !important;
 }
 
 .mobile-nav-num {
-    font-size: 0.85rem !important;
+    font-size: 0.75rem !important;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
     font-weight: 700 !important;
     color: #C41E3A !important;
     letter-spacing: 0.08em !important;
-    min-width: 26px !important;
+    min-width: 24px !important;
     transition: color 0.2s ease !important;
 }
 
 .mobile-nav-label {
-    font-family: var(--font-playfair), 'Playfair Display', Georgia, Cambria, serif !important;
-    font-size: 2.35rem !important;
-    font-weight: 500 !important;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
     color: #1F2421 !important;
-    letter-spacing: -0.02em !important;
-    line-height: 1.1 !important;
+    letter-spacing: -0.01em !important;
+    line-height: 1.3 !important;
     transition: color 0.2s ease, transform 0.2s ease !important;
 }
 
 @media (max-height: 680px) {
     .mobile-nav-item {
-        padding: 0.85rem 0.25rem !important;
-        gap: 1.15rem !important;
+        padding: 0.75rem 0.25rem !important;
+        gap: 0.85rem !important;
     }
     .mobile-nav-label {
-        font-size: 1.95rem !important;
+        font-size: 1.05rem !important;
     }
 }
 
