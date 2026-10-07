@@ -200,7 +200,7 @@ export default function Properties() {
             Ready to Acquire or Develop in Nigeria?
           </h2>
           <p className="home-cta-desc" style={{ color: '#4B5563', fontSize: '1.05rem', lineHeight: 1.6, marginBottom: '2rem' }}>
-            Connect directly with Principal Consultant Kolade Abiola Daramola and our senior advisory desk for transparent, verified transactions.
+            Connect directly with our senior advisory desk for transparent, verified transactions.
           </p>
           <div className="home-cta-btn-group" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
             <Link

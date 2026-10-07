@@ -107,16 +107,18 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Column 3: Our Capabilities */}
+        {/* Column 3: Our Services */}
         <div className="col-span-1">
           <h3 className="footer-heading">
-            Our Capabilities
+            Our Services
           </h3>
           <ul className="footer-link-list">
-            <li><Link href="/services#sales">Property Acquisitions</Link></li>
-            <li><Link href="/services#management">Asset &amp; Facility Management</Link></li>
-            <li><Link href="/services#title">Title Perfection &amp; C of O</Link></li>
+            <li><Link href="/services#sales">Property Sales &amp; Acquisitions</Link></li>
+            <li><Link href="/services#management">Property &amp; Asset Management</Link></li>
+            <li><Link href="/services#letting">Luxury Letting &amp; Tenancy</Link></li>
             <li><Link href="/services#advisory">Valuation &amp; Advisory</Link></li>
+            <li><Link href="/services#title">Title Documentation</Link></li>
+            <li><Link href="/services#architectural">Architectural &amp; Planning</Link></li>
           </ul>
         </div>
 

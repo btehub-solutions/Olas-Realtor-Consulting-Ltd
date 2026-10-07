@@ -61,7 +61,7 @@ export default function Home() {
                   <div>
                     <h3 className="card-title" style={{ fontSize: '1.05rem', fontWeight: 700, color: '#1F2421', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <FaLandmark style={{ color: '#00A86B', flexShrink: 0 }} />
-                      <span>Acquisitions</span>
+                      <span>Property Acquisition</span>
                     </h3>
                     <p className="card-text" style={{ fontSize: '0.84rem', color: '#4B5563', lineHeight: 1.5, marginBottom: '1rem' }}>
                       Verified land banks and developments with thorough legal searches and contract negotiation.
@@ -88,7 +88,7 @@ export default function Home() {
                   <div>
                     <h3 className="card-title" style={{ fontSize: '1.05rem', fontWeight: 700, color: '#1F2421', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <FaBuilding style={{ color: '#00A86B', flexShrink: 0 }} />
-                      <span>Asset Management</span>
+                      <span>Property Management</span>
                     </h3>
                     <p className="card-text" style={{ fontSize: '0.84rem', color: '#4B5563', lineHeight: 1.5, marginBottom: '1rem' }}>
                       Complete tenant vetting, routine maintenance, rent collection, and facility oversight.
@@ -115,7 +115,7 @@ export default function Home() {
                   <div>
                     <h3 className="card-title" style={{ fontSize: '1.05rem', fontWeight: 700, color: '#1F2421', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <FaFileContract style={{ color: '#00A86B', flexShrink: 0 }} />
-                      <span>Title Regularization</span>
+                      <span>Title Documentation</span>
                     </h3>
                     <p className="card-text" style={{ fontSize: '0.84rem', color: '#4B5563', lineHeight: 1.5, marginBottom: '1rem' }}>
                       Expedited processing of land titles, Governor’s Consent, C of O, and registered survey plans.
