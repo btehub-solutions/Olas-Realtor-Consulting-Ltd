@@ -45,7 +45,7 @@ export default function Navbar() {
     { number: '01', label: 'Home', href: '/' },
     { number: '02', label: 'About', href: '/about' },
     { number: '03', label: 'Services', href: '/services' },
-    { number: '04', label: 'Portfolio', href: '/properties' },
+    { number: '04', label: 'Properties', href: '/properties' },
     { number: '05', label: 'Contact', href: '/contact' },
   ];
 
@@ -120,7 +120,7 @@ export default function Navbar() {
                 href="/properties"
                 className={`nav-link ${isLinkActive('/properties') ? 'active' : ''}`}
               >
-                Portfolio
+                Properties
               </Link>
             </li>
             <li>
@@ -135,91 +135,85 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Luxury Editorial Mobile Drawer Overlay (Matches Reference Design) */}
-      <div 
-        className={`mobile-luxury-drawer ${isMobileMenuOpen ? 'open' : ''}`}
+      {/* Mobile Drawer Backdrop */}
+      {isMobileMenuOpen && (
+        <div 
+          className="mobile-side-backdrop"
+          onClick={() => setIsMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Mobile Side Navigation Drawer (100% Cloned from Reference Design) */}
+      <aside 
+        className={`mobile-side-drawer ${isMobileMenuOpen ? 'open' : ''}`}
+        aria-label="Mobile Navigation"
         aria-hidden={!isMobileMenuOpen}
       >
-        <div className="mobile-drawer-inner">
-          {/* Top Bar: Brand Logo & Close Button */}
-          <div className="mobile-drawer-header">
-            <Link 
-              href="/" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="mobile-drawer-logo"
-              aria-label="Olas Realtor Consulting Ltd Home"
-            >
-              <Image
-                src="/images/logo-trimmed.png"
-                alt="Olas Realtor Consulting Ltd"
-                width={140}
-                height={36}
-                style={{ height: '34px', width: 'auto', maxHeight: '34px', objectFit: 'contain', display: 'block' }}
-              />
-            </Link>
-
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="mobile-drawer-close"
-              aria-label="Close navigation menu"
-            >
-              <FaXmark size={22} />
-            </button>
-          </div>
-
-          {/* Numbered Luxury Navigation Links */}
-          <div className="mobile-drawer-links-wrap">
-            <nav className="mobile-drawer-nav" aria-label="Mobile Navigation">
-              {navLinks.map((item) => {
-                const active = isLinkActive(item.href);
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={`mobile-nav-item ${active ? 'active' : ''}`}
-                  >
-                    <span className="mobile-nav-num">{item.number}</span>
-                    <span className="mobile-nav-label">{item.label}</span>
-                  </Link>
-                );
-              })}
-            </nav>
-          </div>
-
-          {/* Bottom Information Block & Action Button */}
-          <div className="mobile-drawer-footer">
-            <div className="mobile-drawer-meta-grid">
-              <div className="mobile-drawer-meta-col">
-                <span className="mobile-meta-title">SAY HELLO</span>
-                <a 
-                  href="mailto:olasarealtor@gmail.com" 
-                  className="mobile-meta-value text-link"
-                >
-                  olasarealtor@gmail.com
-                </a>
-              </div>
-              <div className="mobile-drawer-meta-col">
-                <span className="mobile-meta-title">OPEN HOURS</span>
-                <span className="mobile-meta-value">
-                  Mon – Sat: 8AM – 6PM
-                </span>
-              </div>
-            </div>
-
-            {/* Prominent Full-Width WhatsApp CTA Button */}
-            <a
-              href="https://wa.me/2348164220387?text=Hello%20Olas%20Realtor%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mobile-drawer-whatsapp-btn"
-            >
-              <FaWhatsapp size={20} />
-              <span>Chat on WhatsApp</span>
-            </a>
-          </div>
+        {/* Top Header Banner in Brand Forest Green */}
+        <div className="mobile-drawer-top-banner">
+          <span className="mobile-drawer-title">MAIN MENU</span>
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="mobile-drawer-close-btn"
+            aria-label="Close navigation menu"
+          >
+            <FaXmark size={20} />
+          </button>
         </div>
-      </div>
+
+        {/* Clean Stacked Navigation Menu List */}
+        <nav className="mobile-drawer-menu-list">
+          <Link
+            href="/"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`mobile-menu-link ${isLinkActive('/') ? 'active' : ''}`}
+          >
+            <span>Home</span>
+          </Link>
+          <Link
+            href="/services"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`mobile-menu-link ${isLinkActive('/services') ? 'active' : ''}`}
+          >
+            <span>Services</span>
+          </Link>
+          <Link
+            href="/properties"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`mobile-menu-link ${isLinkActive('/properties') ? 'active' : ''}`}
+          >
+            <span>Property Listings</span>
+          </Link>
+          <Link
+            href="/about"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`mobile-menu-link ${isLinkActive('/about') ? 'active' : ''}`}
+          >
+            <span>About Us</span>
+          </Link>
+          <Link
+            href="/contact"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className={`mobile-menu-link ${isLinkActive('/contact') ? 'active' : ''}`}
+          >
+            <span>Contact Us</span>
+          </Link>
+        </nav>
+
+        {/* Bottom Action Bar */}
+        <div className="mobile-drawer-bottom">
+          <a
+            href="https://wa.me/2348164220387?text=Hello%20Olas%20Realtor%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mobile-drawer-cta-btn"
+          >
+            <FaWhatsapp size={18} />
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </aside>
     </>
   );
 }

@@ -23,7 +23,7 @@ export default function Home() {
       {/* SECTION 1: HERO SECTION */}
       <section className="hero">
         <div className="hero-content">
-          <h1 className="slide-up">Premier Real Estate Consulting &amp; Strategic Advisory</h1>
+          <h1 className="slide-up">Premium Real Estate Consulting &amp; Strategic Advisory</h1>
           <p className="fade-in">Guiding institutional investors, diaspora clients, and property owners through verified acquisitions, title perfection, and executive asset management across Nigeria.</p>
           <div style={{ display: 'flex', gap: '0.875rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
             <Link href="/properties" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center' }}>

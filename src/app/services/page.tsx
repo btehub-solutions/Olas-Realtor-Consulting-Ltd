@@ -36,7 +36,7 @@ export default function Services() {
       id: 'sales',
       title: 'Property Sales & Acquisitions',
       icon: FaHouse,
-      image: '/images/projects/project-charcoal-duplex.jpg',
+      image: '/images/projects/acquisitions-for-sale.jpg',
       desc: 'Seamless acquisition and disposal of premium residential homes, commercial complexes, and investment lands with comprehensive due diligence.',
       highlights: ['Title Due Diligence & Search', 'Price Negotiation & Contracting', 'Closing & Escrow Support'],
       link: '/properties',
@@ -46,7 +46,7 @@ export default function Services() {
       id: 'management',
       title: 'Property & Asset Management',
       icon: FaBuilding,
-      image: '/images/projects/project-terrace-duplex.jpg',
+      image: '/images/projects/asset-management-facility.jpg',
       desc: 'End-to-end facility oversight, tenant screening, preventive maintenance, and steady rental yield collection to maximize asset values.',
       highlights: ['Strict Tenant Vetting', 'Prompt Rent Remittance', 'Routine Facility Maintenance'],
       link: '/contact?subject=Property%20Management',
@@ -66,7 +66,7 @@ export default function Services() {
       id: 'advisory',
       title: 'Valuation & Advisory',
       icon: FaCalculator,
-      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&auto=format&fit=crop&q=80',
       desc: 'Certified real estate valuations for open-market assessment, mortgage security, capital gains, insurance, and investment feasibility.',
       highlights: ['Open Market Valuations', 'Mortgage & Loan Appraisals', 'Portfolio Feasibility Studies'],
       link: '/contact?subject=Valuation%20Services',
@@ -76,7 +76,7 @@ export default function Services() {
       id: 'title',
       title: 'Title Documentation & Regularization',
       icon: FaFileContract,
-      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop',
+      image: '/images/projects/title-regularization-signing.jpg',
       desc: 'Expedited processing of official land titles, Governor’s Consent, C of O, Deed of Assignment, and registered survey documentation.',
       highlights: ['C of O & Consent Processing', 'Registered Survey Plans', 'Land Registry Lodgment'],
       link: '/contact?subject=Title%20Documentation',
@@ -120,14 +120,36 @@ export default function Services() {
             }}
           >
             {services.map((srv) => (
-              <div key={srv.id} id={srv.id} className="card" style={{ display: 'flex', flexDirection: 'column' }}>
-                <div className="card-image" style={{ height: '175px', position: 'relative' }}>
+              <div
+                key={srv.id}
+                id={srv.id}
+                className="card"
+                style={{
+                  borderRadius: '10px',
+                  border: '1px solid rgba(0, 0, 0, 0.08)',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  backgroundColor: '#FFFFFF',
+                  boxShadow: '0 2px 10px rgba(0, 0, 0, 0.04)',
+                }}
+              >
+                <div
+                  className="card-image"
+                  style={{
+                    height: '180px',
+                    width: '100%',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    backgroundColor: '#F3F4F6',
+                  }}
+                >
                   <Image
                     src={srv.image}
                     alt={srv.title}
                     width={600}
                     height={380}
-                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                    style={{ objectFit: 'cover', width: '100%', height: '100%', display: 'block' }}
                   />
                 </div>
                 <div className="card-content" style={{ padding: '1.25rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
